@@ -11,9 +11,9 @@ def gerar_grafico_html(ticker: str, local=None) -> str:
     # Define o caminho do arquivo baseado no ticker
     dia = datetime.today().strftime("%d-%m-%Y")
     if local:
-        arquivo = f"../dados/csv/{dia}/stock_data_{str(ticker).split(':')[0]}.csv"
+        arquivo = f"../dados/csv/{dia}/{str(ticker).split(':')[0]}_stock_data.csv"
     else:
-        arquivo = f"./dados/csv/{dia}/stock_data_{str(ticker).split(':')[0]}.csv"
+        arquivo = f"./dados/csv/{dia}/{str(ticker).split(':')[0]}_stock_data.csv"
 
     if not os.path.exists(arquivo):
         raise HTTPException(status_code=404, detail="Dados para o ticker não encontrados.")
@@ -77,7 +77,6 @@ def gerar_grafico_html(ticker: str, local=None) -> str:
 
         # Salva o gráfico
         fig.write_html(output_path)
-        print(f"Gráfico salvo em: {output_path}")
 
     # Converte o gráfico para HTML
     html = fig.to_html(full_html=False)

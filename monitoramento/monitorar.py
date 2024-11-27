@@ -5,6 +5,7 @@ import os
 import logging
 import time as t
 from datetime import datetime, time
+from cotacoes.grafico import gerar_grafico_html
 
 # Configuração do logging
 logging.basicConfig(
@@ -43,8 +44,8 @@ def save_data_to_csv(ticker, price):
     try:
         data_minute = datetime.now().strftime("%Y-%m-%d %H:%M")
         dia = datetime.today().strftime("%d-%m-%Y")
-        os.makedirs(f"./dados/csv/{dia}", exist_ok=True)
-        arquivo = f"./dados/csv/{dia}/{ticker}_stock_data.csv"
+        os.makedirs(f"../dados/csv/{dia}", exist_ok=True)
+        arquivo = f"../dados/csv/{dia}/{ticker}_stock_data.csv"
 
         df_stock = pd.DataFrame([{
             'Data_minute': data_minute,
@@ -76,6 +77,7 @@ def extract_price(ticker, url, intervalo):
             price_element = driver.find_element("xpath", '//*[@class="YMlKec fxKbKc"]')
             price = price_element.text
             save_data_to_csv(ticker, price)
+            gerar_grafico_html("BTC-BRL", True)
         else:
             logging.info(f"Fora do horário de funcionamento para {ticker}.")
     except Exception as e:
