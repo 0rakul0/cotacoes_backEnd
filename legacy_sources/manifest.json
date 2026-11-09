@@ -1,0 +1,4260 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-11-09T02:22:22+00:00",
+  "storage": "archive_only_not_imported_by_fastapi",
+  "sources": [
+    {
+      "repository": "TimesSeriesAgent",
+      "url": "https://github.com/0rakul0/TimesSeriesAgent",
+      "branch": "master",
+      "source_commit": "f40c5605a10909a0d0e159639e9e4fd45a04053f",
+      "archive_files": 101,
+      "archive_bytes": 40137837,
+      "included": [
+        {
+          "source_path": ".env_template",
+          "archive_path": "legacy_sources/TimesSeriesAgent/.env_template",
+          "size": 80,
+          "sha256": "60f1261ee732388444b4db545e2c92e54396b37ef79db8f4c4cb4b3050cd51df"
+        },
+        {
+          "source_path": ".gitignore",
+          "archive_path": "legacy_sources/TimesSeriesAgent/.gitignore",
+          "size": 207,
+          "sha256": "4ca0a22a2140f421ad69e420da8acebc9e0cad8c11337c80e26e15deb43743c6"
+        },
+        {
+          "source_path": ".python-version",
+          "archive_path": "legacy_sources/TimesSeriesAgent/.python-version",
+          "size": 5,
+          "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+        },
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/TimesSeriesAgent/README.md",
+          "size": 25477,
+          "sha256": "2800e105a27cc4f391d39f989daac6d77d6109d08fbfa333917a304edec2dc3b"
+        },
+        {
+          "source_path": "artigo/2026_XX_Oil/main.pdf",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/2026_XX_Oil/main.pdf",
+          "size": 158401,
+          "sha256": "710b8a54d4bafb1e9cc5381dec8095a1c20c623f3943a9aed75a5b047367de4e"
+        },
+        {
+          "source_path": "artigo/2026_XX_Oil/main.tex",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/2026_XX_Oil/main.tex",
+          "size": 34318,
+          "sha256": "5c877472c8bb63599e69c20a11b1ec97fee03a999ae5deed17f9aecd6145dee8"
+        },
+        {
+          "source_path": "artigo/2026_XX_Oil/references.bib",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/2026_XX_Oil/references.bib",
+          "size": 12226,
+          "sha256": "2a9744e9b77f56e20c0334f9435b02b04c592e566c74d6e652500ef3ffc98b3a"
+        },
+        {
+          "source_path": "artigo/versao_1/fig1.png",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/versao_1/fig1.png",
+          "size": 77159,
+          "sha256": "45230b5d587e0cd5a3b1508660b70fcf8dab01a12bf7c1283589f3dc33b2dac4"
+        },
+        {
+          "source_path": "artigo/versao_1/main.pdf",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/versao_1/main.pdf",
+          "size": 225095,
+          "sha256": "f10830376329519b4d3f235d2005d4c2f3667869ac5be045b8b23cf1ee05689e"
+        },
+        {
+          "source_path": "artigo/versao_1/main.tex",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/versao_1/main.tex",
+          "size": 33396,
+          "sha256": "2e8e266d7338c81ba172cb2b4d421e518bd8ab988233f92352946c90ce550d82"
+        },
+        {
+          "source_path": "artigo/versao_1/sbc-template.bib",
+          "archive_path": "legacy_sources/TimesSeriesAgent/artigo/versao_1/sbc-template.bib",
+          "size": 12226,
+          "sha256": "2a9744e9b77f56e20c0334f9435b02b04c592e566c74d6e652500ef3ffc98b3a"
+        },
+        {
+          "source_path": "dashbord/README.md",
+          "archive_path": "legacy_sources/TimesSeriesAgent/dashbord/README.md",
+          "size": 536,
+          "sha256": "c391fb5ad3e2a811e0f7d5aa8c10548a94ca05461d125984827fb1fddb6290f0"
+        },
+        {
+          "source_path": "dashbord/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/dashbord/__init__.py",
+          "size": 47,
+          "sha256": "a0b7f7b21c33d4f658f409ee65437155a9b964d127b893d4007fd280eb04dd59"
+        },
+        {
+          "source_path": "dashbord/app.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/dashbord/app.py",
+          "size": 22766,
+          "sha256": "6713665ea7f61f698ab0847e9494521ab19603b6523a04ee6c627e78bde89c70"
+        },
+        {
+          "source_path": "dashbord/data_access.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/dashbord/data_access.py",
+          "size": 24066,
+          "sha256": "2a92d7dab6df32c3342ae0208fb2f24eba95f3bb14d48fd378097bd4cc26b4e1"
+        },
+        {
+          "source_path": "dashbord/knowledge_base.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/dashbord/knowledge_base.py",
+          "size": 7355,
+          "sha256": "3344ba78e3d19c46f0dce95968747eaea1c706b2697ad85a2a0c148d3312c329"
+        },
+        {
+          "source_path": "data/analise_eventos_vs_nao_eventos.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_eventos_vs_nao_eventos.csv",
+          "size": 1553,
+          "sha256": "395d3242d8d02fd4b7360da399e65a8b4dfc204e7a0de84252eeae4624dbb5ae"
+        },
+        {
+          "source_path": "data/analise_limiares_evento.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_limiares_evento.csv",
+          "size": 524,
+          "sha256": "8ac70d4149bcb3a5621b45a69926240a2ce6f28ede1a9f8bad60276be72a7967"
+        },
+        {
+          "source_path": "data/analise_metricas_complementares.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_metricas_complementares.csv",
+          "size": 1118,
+          "sha256": "fb6b09b337513a269705a76579c2c9daf92932b62c99c48e0de0a69b358b7fc5"
+        },
+        {
+          "source_path": "data/analise_piora_hibrido_detalhes.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_piora_hibrido_detalhes.csv",
+          "size": 535817,
+          "sha256": "df45b9cf9acbccb3cdad5ce3ec7ea10d35177ff1fab83626b5ead18516b370a9"
+        },
+        {
+          "source_path": "data/analise_piora_hibrido_resumo.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_piora_hibrido_resumo.csv",
+          "size": 587,
+          "sha256": "9a35fefef2785526d22e6f7fb423b69f6ebf19a694aad29af86e56ed300c6392"
+        },
+        {
+          "source_path": "data/analise_robustez_anual.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/analise_robustez_anual.csv",
+          "size": 7556,
+          "sha256": "f63d92ff969a905d2207b6853b9413362ba9b1bd68bfdba12406cdb44ca9438c"
+        },
+        {
+          "source_path": "data/cluster_brent.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/cluster_brent.csv",
+          "size": 43555,
+          "sha256": "cd058410c86f420f4093bcf29a7fadc55d2f11b2a85dce6f8ef236f00bd1bf3a"
+        },
+        {
+          "source_path": "data/cluster_exxo34.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/cluster_exxo34.csv",
+          "size": 25542,
+          "sha256": "e2ba9346d4d1be1ddd59d3a4199511089793e2329972f9e172d5ea55ca5da715"
+        },
+        {
+          "source_path": "data/cluster_motivos.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/cluster_motivos.csv",
+          "size": 129664,
+          "sha256": "e021a50f72cd0ee72b90c78d95ccac5bb9d06468df94880216502bbbe63fd11a"
+        },
+        {
+          "source_path": "data/cluster_petr4.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/cluster_petr4.csv",
+          "size": 35169,
+          "sha256": "fcbf36eb0371a5f19a2cd5b998ef5fb778dc1e86974ba45c3d694c1c417127ff"
+        },
+        {
+          "source_path": "data/cluster_prio3.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/cluster_prio3.csv",
+          "size": 25944,
+          "sha256": "9c70928f160d14d44d1ea134cb109060f1b2e7eb776286de4f70fe4790c15fe1"
+        },
+        {
+          "source_path": "data/dados_acao_BZ=F_5y.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_acao_BZ=F_5y.csv",
+          "size": 145710,
+          "sha256": "87801062a8896f55b03e4e148d381840c7452a96332bc6b65e8c629af6cf7888"
+        },
+        {
+          "source_path": "data/dados_acao_EXXO34.SA_5y.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_acao_EXXO34.SA_5y.csv",
+          "size": 147031,
+          "sha256": "fcd81c0e72b6e4b19e77724b3cbaf7c55b45974a1c5e767abfe543c9af28b635"
+        },
+        {
+          "source_path": "data/dados_acao_PETR4.SA_5y.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_acao_PETR4.SA_5y.csv",
+          "size": 153155,
+          "sha256": "2fc08d066cd3ae30983c8c1f189502a977c7ae1cc1085919b1e61c6e54531d1e"
+        },
+        {
+          "source_path": "data/dados_acao_PRIO3.SA_5y.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_acao_PRIO3.SA_5y.csv",
+          "size": 150374,
+          "sha256": "e56e5f179e0363a22025aca0ab0d1fc6b86ffdacc8d49fff73334169011dd6cd"
+        },
+        {
+          "source_path": "data/dados_exxo34_brent.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_exxo34_brent.csv",
+          "size": 234011,
+          "sha256": "19741b155447e34dda3e7100b54ef9e957363bc74bf087b601c51c4d04ffe4a1"
+        },
+        {
+          "source_path": "data/dados_petr4_brent.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_petr4_brent.csv",
+          "size": 240129,
+          "sha256": "a2ad6a2df0268f3cddebc3981d26b352686441a0dab7bccba5bc13dcce28a100"
+        },
+        {
+          "source_path": "data/dados_prio3_brent.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/dados_prio3_brent.csv",
+          "size": 237348,
+          "sha256": "d493e0d345c4f1851eea3ca1983c464e7e1e81006f338339e33a936f3e9fed32"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_exxo34_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_exxo34_autoencoder.csv",
+          "size": 1580392,
+          "sha256": "8072cf5b087dccc38be5a7e9ae93050c32394ff020d6b9dd403bde4c093701b2"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_exxo34_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_exxo34_lstm.csv",
+          "size": 1580626,
+          "sha256": "2039f282d2fb5b3a4bb6ac4ef300382503c622f973c075d71a09f6cdd4996d16"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_exxo34_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_exxo34_transformer.csv",
+          "size": 1582963,
+          "sha256": "d3912cb35e4444dff8ab1bd42d3385394b8adde2cc813fe833aa094eafa56fd7"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_petr4_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_petr4_autoencoder.csv",
+          "size": 1607727,
+          "sha256": "4266d591774868b46d725b4978e12022f51ce67852bebe054fa0cdf2d51d99c2"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_petr4_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_petr4_lstm.csv",
+          "size": 1607838,
+          "sha256": "5efdc14ba436cac9b6cce958a1dc870a510d68f69ba223bf67af70e86b937936"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_petr4_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_petr4_transformer.csv",
+          "size": 1609635,
+          "sha256": "38344d7764237c0ea762ef99f7a4327e6edafdcc484901b6a0c46fc1ed5db961"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_prio3_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_prio3_autoencoder.csv",
+          "size": 1593886,
+          "sha256": "f6ec2445d3dccb89d2e669769883a46bb55ccc4acac9c58325812808d24121e6"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_prio3_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_prio3_lstm.csv",
+          "size": 1594630,
+          "sha256": "55ebbb19c8698603de80e44b0c44471bcb21ff084bcbe800fa16e4d03f312601"
+        },
+        {
+          "source_path": "data/experiment_logs/decision_log_prio3_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/decision_log_prio3_transformer.csv",
+          "size": 1596265,
+          "sha256": "275d7f7419470e6f0326603d4097c3a8052dba2b5ada610ece071d4ffff3c23e"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_exxo34_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_exxo34_autoencoder.csv",
+          "size": 234748,
+          "sha256": "2b8abd076923ceb5aa01e91a9a20c1b09b0e5da20560df8b97b54dc3efbb5776"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_exxo34_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_exxo34_lstm.csv",
+          "size": 225305,
+          "sha256": "8515d771b1f181593ada77cde097a634c821d7fb235af168e56b32de63a24658"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_exxo34_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_exxo34_transformer.csv",
+          "size": 234419,
+          "sha256": "dcdbf32bb2ed3fa530615d0c4430f6510297d0d921b5cc0f8b438888a82a674d"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_petr4_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_petr4_autoencoder.csv",
+          "size": 236912,
+          "sha256": "befc6cb874062099b3382af36d1cf101ca0643df381966f15d320dbdfb553f07"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_petr4_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_petr4_lstm.csv",
+          "size": 227590,
+          "sha256": "bb374e8ac61ff7b3ea790f8f2c769a98b9733c41f2d584f54e0dbd9559b0b64a"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_petr4_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_petr4_transformer.csv",
+          "size": 236840,
+          "sha256": "ee9bcf28a41905b60ae14ddb1cd185263d9b0418f97694afa4d5de2068c42552"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_prio3_autoencoder.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_prio3_autoencoder.csv",
+          "size": 235264,
+          "sha256": "7b3b348a7c93200ebd758ae77bd8b53facbfed846ca0ae124d540149c3cb2221"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_prio3_lstm.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_prio3_lstm.csv",
+          "size": 225789,
+          "sha256": "59f3c244a67e95a9a8aad8ce149d1beab7da8fc97aa964f5e679da3cb30d7f41"
+        },
+        {
+          "source_path": "data/experiment_logs/prediction_details_prio3_transformer.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/experiment_logs/prediction_details_prio3_transformer.csv",
+          "size": 235345,
+          "sha256": "15ccf19a7f82de2c0bce967a15014a5d2b7d19efb560c296ef5b16fa1f5e4e5c"
+        },
+        {
+          "source_path": "data/perguntas_pesquisa.md",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/perguntas_pesquisa.md",
+          "size": 2327,
+          "sha256": "4834237c1c1e008edc4f910532e71fceeebcd5dec4ee0acfe5118e9fbea8c20e"
+        },
+        {
+          "source_path": "data/resultado_ablation_modelos.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/resultado_ablation_modelos.csv",
+          "size": 670,
+          "sha256": "33f9c024c85edb761e646ba33afbba869850653d6ed9d8263ba51a8570d08327"
+        },
+        {
+          "source_path": "data/resultado_comparacao_modelos.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/data/resultado_comparacao_modelos.csv",
+          "size": 670,
+          "sha256": "33f9c024c85edb761e646ba33afbba869850653d6ed9d8263ba51a8570d08327"
+        },
+        {
+          "source_path": "eval/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_path": "eval/article_answers.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/article_answers.py",
+          "size": 9581,
+          "sha256": "512db5b290f1729cf82836a90b261622bcdebc67ef14945e369273ae30464828"
+        },
+        {
+          "source_path": "eval/compare_rerank_impact.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/compare_rerank_impact.py",
+          "size": 2778,
+          "sha256": "ce7f1e849c6ce001568819c2ec7c518afc0831952669c240566e9228e0accadc"
+        },
+        {
+          "source_path": "eval/hybrid_core.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/hybrid_core.py",
+          "size": 8080,
+          "sha256": "d9f6e25a0501446400b8094562fc2117c282251fa8928554b7b5e2bb952cab22"
+        },
+        {
+          "source_path": "eval/modelo_hibrido_offline.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/modelo_hibrido_offline.py",
+          "size": 27307,
+          "sha256": "49bd87ded8eea03c51519e63b72c5f4f7f8b24122ef510fae2ae058e449cb1ed"
+        },
+        {
+          "source_path": "eval/plotter_refactor.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/eval/plotter_refactor.py",
+          "size": 19088,
+          "sha256": "394860dbd18fd9d00992cff05c6df40136bd50e8d26b493871b963f751a98228"
+        },
+        {
+          "source_path": "modelos/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_path": "modelos/autoencoder_exxo34.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/autoencoder_exxo34.pt",
+          "size": 1788565,
+          "sha256": "7f165f44d19c53fd0e90e7e8eba8d0b713c5235573d974f726ba4125515e394c"
+        },
+        {
+          "source_path": "modelos/autoencoder_petr4.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/autoencoder_petr4.pt",
+          "size": 1788537,
+          "sha256": "7ca43780779d082c45022277c8a64cbb68da4ffcf8619097708f0bbafdef214e"
+        },
+        {
+          "source_path": "modelos/autoencoder_prio3.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/autoencoder_prio3.pt",
+          "size": 1788601,
+          "sha256": "b67d0b6ec1894c7950eda09f53d6c53d9c5d209deb7256409936ac53c45af5bd"
+        },
+        {
+          "source_path": "modelos/embeddings_frases_meta.csv",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/embeddings_frases_meta.csv",
+          "size": 55030,
+          "sha256": "832876c6e538ed92bc6336cc92d7a58eb83dddbcde3aa4edb3a31b0df83d6e45"
+        },
+        {
+          "source_path": "modelos/lstm_exxo34.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/lstm_exxo34.pt",
+          "size": 821317,
+          "sha256": "3e87c6f3287ed88614eb956fb8addd590c761ba32c40788fff54ccef2a69e97a"
+        },
+        {
+          "source_path": "modelos/lstm_petr4.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/lstm_petr4.pt",
+          "size": 821301,
+          "sha256": "393739993a8425603a1592acdb1dcef26dd683e0c83d2e0103f2566f53b2604f"
+        },
+        {
+          "source_path": "modelos/lstm_prio3.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/lstm_prio3.pt",
+          "size": 821301,
+          "sha256": "7b30f57d24fe0b7ec3ecf1863937e16496be97538b63e1b8bbe9558cdc08ffbc"
+        },
+        {
+          "source_path": "modelos/model_baseline_lstm.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/model_baseline_lstm.py",
+          "size": 747,
+          "sha256": "09b3179adcc5685e1316cfc1fe1faa9fbda63b4b7524400b59128e2b3f05e0cb"
+        },
+        {
+          "source_path": "modelos/model_lstm_autoencoder.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/model_lstm_autoencoder.py",
+          "size": 3100,
+          "sha256": "3f9a8aac286ae32647d3fdab9fb9841cdf79278bcb48cf8500b63b9793542331"
+        },
+        {
+          "source_path": "modelos/model_transformer_price.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/model_transformer_price.py",
+          "size": 2285,
+          "sha256": "2a5f93f8d4cb3d330b329f365f159a61d56926db6afb372ab38a3b62f64baa1c"
+        },
+        {
+          "source_path": "modelos/transformer_exxo34.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/transformer_exxo34.pt",
+          "size": 4173933,
+          "sha256": "2e2f9e63af5d5ddce65c4db87c013ee1732113e136341def437772d357470799"
+        },
+        {
+          "source_path": "modelos/transformer_petr4.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/transformer_petr4.pt",
+          "size": 4173886,
+          "sha256": "db70b875a0b426f2cb77705a03cec7dff8f2426b6390d1bdc7d057aedfdb53e5"
+        },
+        {
+          "source_path": "modelos/transformer_prio3.pt",
+          "archive_path": "legacy_sources/TimesSeriesAgent/modelos/transformer_prio3.pt",
+          "size": 4173886,
+          "sha256": "438108aeaf88793ee6eaef46e0a79bd19842de1d33442590abbf08ead71afda7"
+        },
+        {
+          "source_path": "pyproject.toml",
+          "archive_path": "legacy_sources/TimesSeriesAgent/pyproject.toml",
+          "size": 762,
+          "sha256": "0c38b08b810ff8e5b56261acc4a64a9333d5a097bb0fad9ab19206f4516c7461"
+        },
+        {
+          "source_path": "src/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_path": "src/agent_noticia.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/agent_noticia.py",
+          "size": 12182,
+          "sha256": "d7c38a1e1011deaf93649621154423c323474dd9359a3ba2015269aeefb72ef6"
+        },
+        {
+          "source_path": "src/correlacao_ativos.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/correlacao_ativos.py",
+          "size": 9774,
+          "sha256": "1bbf7c5ea7507787135f4e52c15b53c6800f463fd0a43e29f8487c580af1156b"
+        },
+        {
+          "source_path": "src/frases_clusters.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/frases_clusters.py",
+          "size": 9215,
+          "sha256": "77a908a917a47c64d621153dd40ac41bcd8aeb3db5071b45bcb8c0eae0abfb67"
+        },
+        {
+          "source_path": "src/main.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/main.py",
+          "size": 1700,
+          "sha256": "ade44a24070104e99616e9c9067cae93c5420bc0a5716ee024989ca350a1d2c5"
+        },
+        {
+          "source_path": "src/mvp.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/mvp.py",
+          "size": 12129,
+          "sha256": "736adc7e06381d08c3b4859985389c40a183e723f95b0c9ee7bb4e495eaa5a33"
+        },
+        {
+          "source_path": "src/pipeline_online.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/pipeline_online.py",
+          "size": 2077,
+          "sha256": "c151fbe8e3d69abb52c0ccd7800f153467b359ac28af4873436bf6cd8a50bbdd"
+        },
+        {
+          "source_path": "src/run_all.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/run_all.py",
+          "size": 4440,
+          "sha256": "4405b301b62a20a6574f4675cd944d4715f0a9e228ac46b2e15db5962c4b833c"
+        },
+        {
+          "source_path": "src/seq_eventos.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/seq_eventos.py",
+          "size": 9231,
+          "sha256": "6601bae62877abea579cfc6e97a02325e7f5c56262e0c51954150fa7385545c0"
+        },
+        {
+          "source_path": "src/serietemporal.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/serietemporal.py",
+          "size": 3309,
+          "sha256": "36b05acb90f8a29abec88eea93604edf0dcec365f65c5a98fd051a51febb904f"
+        },
+        {
+          "source_path": "src/variacia_ativos.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/src/variacia_ativos.py",
+          "size": 4263,
+          "sha256": "76c780d5bb93cf2ed33e98ad405b3966e505a9802f89c2484851a5228b83d176"
+        },
+        {
+          "source_path": "tests/conftest.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/tests/conftest.py",
+          "size": 146,
+          "sha256": "2dfc2899803d06e39471d2d2133e0743ed128bd469a1d801a6d57fdfe2c9e323"
+        },
+        {
+          "source_path": "tests/test_reproducibility_smoke.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/tests/test_reproducibility_smoke.py",
+          "size": 4793,
+          "sha256": "036927a9daf3cbad3647a13d2fc4d5c6ae52573ba29ee21a3ec51cd8594187cd"
+        },
+        {
+          "source_path": "tests/test_rerank_utils.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/tests/test_rerank_utils.py",
+          "size": 970,
+          "sha256": "bd46d64c704092585633ffbce8984c81a01e8c2ba311838482a4809685f099d2"
+        },
+        {
+          "source_path": "train/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/train/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_path": "train/trainar_ae_ativo.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/train/trainar_ae_ativo.py",
+          "size": 4287,
+          "sha256": "7a103d567708350b51ac7ebe91cf0e5d8905b5778a9d4ab54b8900ce69916c42"
+        },
+        {
+          "source_path": "train/treinar_ativo.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/train/treinar_ativo.py",
+          "size": 3322,
+          "sha256": "2b6aad2ca72f739996961456e89fd476637628ef9f53499c89f67533396169d1"
+        },
+        {
+          "source_path": "train/treinar_transformrs.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/train/treinar_transformrs.py",
+          "size": 4313,
+          "sha256": "3b14ddfbb88668801def34c9e680bbee0f006e2a06c620b25ab6a724662595b6"
+        },
+        {
+          "source_path": "utils/__init__.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_path": "utils/clusters_utils.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/clusters_utils.py",
+          "size": 6021,
+          "sha256": "1b16415ab2f87561e98e65dd686f05808d15b8942a0ae106eebcdecb4cf1e785"
+        },
+        {
+          "source_path": "utils/embedding_manager.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/embedding_manager.py",
+          "size": 4921,
+          "sha256": "80c4dc38ed7bc1944050aafd54a13a65ec0b056a0e80978d01364c288da43302"
+        },
+        {
+          "source_path": "utils/project_paths.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/project_paths.py",
+          "size": 555,
+          "sha256": "fdb8aa58d1ac0b7c77a5cce259d5d45ad345aeeb81fe0f7612c13a492e643d05"
+        },
+        {
+          "source_path": "utils/rerank_utils.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/rerank_utils.py",
+          "size": 4465,
+          "sha256": "4b634a7cacc973c61438d7d0e10ac47bd37a535b198be5c923acb0015dea5da0"
+        },
+        {
+          "source_path": "utils/ver_base.py",
+          "archive_path": "legacy_sources/TimesSeriesAgent/utils/ver_base.py",
+          "size": 652,
+          "sha256": "ba3959b4ff1051280dd093fdfc773b7f86d38a8de861609e6ee7930e588bd05c"
+        },
+        {
+          "source_path": "uv.lock",
+          "archive_path": "legacy_sources/TimesSeriesAgent/uv.lock",
+          "size": 356999,
+          "sha256": "6f5f242135450c0efd519a089b360406b94bd2354c443173d434ebe155d4eadb"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.name",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/TimesSeriesAgent.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/copilot.data.migration.agent.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/copilot.data.migration.ask.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/copilot.data.migration.ask2agent.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/copilot.data.migration.edit.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/Project_Default.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/IEEEtran.cls",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.aux",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.bbl",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.blg",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.fdb_latexmk",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.fls",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.out",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/2026_XX_Oil/main.synctex.gz",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/caption2.sty",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/main.aux",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/main.bbl",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/main.blg",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/main.fdb_latexmk",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/main.fls",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/sbc-template.sty",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "artigo/versao_1/sbc.bst",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "eval/__pycache__/__init__.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "eval/__pycache__/hybrid_core.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "eval/__pycache__/modelo_hibrido_offline.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "eval/__pycache__/plotter_refactor.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/EXXO34_series_temporais_normalizadas.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/EXXO34_series_temporais_normalizadas.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/PETR4_series_temporais_normalizadas.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/PETR4_series_temporais_normalizadas.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/PRIO3_series_temporais_normalizadas.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/PRIO3_series_temporais_normalizadas.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/comparacao_exxo34.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/comparacao_petr4.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/comparacao_prio3.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/correlacao/correlacao_EXXO34.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/correlacao/correlacao_PETR4.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/correlacao/correlacao_PRIO3.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/mvp_online_petr4.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_ae_exxo34.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_ae_petr4.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_ae_prio3.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_lstm_exxo34.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_lstm_petr4.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_lstm_prio3.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_transformer_exxo34.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_transformer_petr4.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/previsao_transformer_prio3.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/retorno/retornos_EXXO34.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/retorno/retornos_PETR4.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/retorno/retornos_PRIO3.SA_vs_BZ=F.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "modelos/__pycache__/__init__.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "modelos/__pycache__/model_baseline_lstm.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "modelos/__pycache__/model_lstm_autoencoder.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "modelos/__pycache__/model_transformer_price.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "modelos/embeddings_frases.npy",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "output_noticias/json_antigo.7z",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/__init__.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/agent_noticia.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/correlacao_ativos.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/frases_clusters.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/mvp.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/pipeline_online.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/seq_eventos.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/serietemporal.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/t_modelo_hibrido_eval.cpython-312-pytest-9.0.0.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/teste_modelo_hibrido_eval.cpython-312-pytest-9.0.0.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "src/__pycache__/variacia_ativos.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "temp_eval_compare/resultado_ablation_modelos_before.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "temp_eval_compare/resultado_comparacao_modelos_before.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "train/__pycache__/__init__.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "train/__pycache__/trainar_ae_ativo.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "train/__pycache__/treinar_ativo.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "utils/__pycache__/__init__.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "utils/__pycache__/embedding_manager.cpython-312.pyc",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "cotacaopython",
+      "url": "https://github.com/0rakul0/cotacaopython",
+      "branch": "main",
+      "source_commit": "33177303c185f72aef21fdaa179eeb6777e88a08",
+      "archive_files": 319,
+      "archive_bytes": 5174659,
+      "included": [
+        {
+          "source_path": "IA_fuzz_cotas.py",
+          "archive_path": "legacy_sources/cotacaopython/IA_fuzz_cotas.py",
+          "size": 3694,
+          "sha256": "0c5b686b784cb3b96bd59ba8f9ca28959f3b1328f0767d6827216abebfe145a6"
+        },
+        {
+          "source_path": "Procfile",
+          "archive_path": "legacy_sources/cotacaopython/Procfile",
+          "size": 60,
+          "sha256": "d7ca53a2ad8bf3c1a8f13e2338cd40bfabbd94b46a0b06fa17b032bdf0dfbdc0"
+        },
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/cotacaopython/README.md",
+          "size": 282,
+          "sha256": "6b7bcdcf2b658f751289ffcb2f1d64eab6e3cc148d71a2b5ebb390df59ca45d0"
+        },
+        {
+          "source_path": "bi/2022-08-31_dataframe_cotacao.csv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-08-31_dataframe_cotacao.csv",
+          "size": 50476,
+          "sha256": "0cf1b1acb727a4cf5b9b602eb0160828f582d2ae9ed15181c64c7edb767aeaeb"
+        },
+        {
+          "source_path": "bi/2022-08-31_dataframe_cotacao.tsv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-08-31_dataframe_cotacao.tsv",
+          "size": 50476,
+          "sha256": "9c5b33c6a2012836a0ad2d2368428e9ef4b7d2ff2f87990f74571ac2ba0b6c5b"
+        },
+        {
+          "source_path": "bi/2022-09-14_dataframe_cotacao.csv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-09-14_dataframe_cotacao.csv",
+          "size": 43962,
+          "sha256": "0ec62f08f0da97b1d6f467e428cda0b3c06e9a9e1e002a63307aeb51e859a100"
+        },
+        {
+          "source_path": "bi/2022-09-14_dataframe_cotacao.tsv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-09-14_dataframe_cotacao.tsv",
+          "size": 43979,
+          "sha256": "bcdd64a6896df759b6dcb2edf6f4fba85bdaeb0538c2e770a0ea50902fabf4ab"
+        },
+        {
+          "source_path": "bi/2022-10-01_dataframe_cotacao.csv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-10-01_dataframe_cotacao.csv",
+          "size": 54568,
+          "sha256": "845cc703e210ccfb96222341e9a6bb54eb92129d84c7896112d403504bae7db6"
+        },
+        {
+          "source_path": "bi/2022-10-01_dataframe_cotacao.tsv",
+          "archive_path": "legacy_sources/cotacaopython/bi/2022-10-01_dataframe_cotacao.tsv",
+          "size": 54568,
+          "sha256": "eadddc93a51fd3a780e55779a49a03a1f9e3dbe20691dcc573087759ce79a2ef"
+        },
+        {
+          "source_path": "bi/dataframe_cotacao.csv",
+          "archive_path": "legacy_sources/cotacaopython/bi/dataframe_cotacao.csv",
+          "size": 50476,
+          "sha256": "0cf1b1acb727a4cf5b9b602eb0160828f582d2ae9ed15181c64c7edb767aeaeb"
+        },
+        {
+          "source_path": "bi/dataframe_cotacao.tsv",
+          "archive_path": "legacy_sources/cotacaopython/bi/dataframe_cotacao.tsv",
+          "size": 49588,
+          "sha256": "a8a4a0e48b9d34c44ae59fd3d8c0dc153e8f5d83b4f10578b21b250a155106e3"
+        },
+        {
+          "source_path": "bi/dataset_tratado_31-09-2022.xlsx",
+          "archive_path": "legacy_sources/cotacaopython/bi/dataset_tratado_31-09-2022.xlsx",
+          "size": 80429,
+          "sha256": "9a5003ebc78c134e5526459c3e887eaa2b1b59b3de92efdd16ff179ca7408c10"
+        },
+        {
+          "source_path": "bi/mongo_cotaceos.csv",
+          "archive_path": "legacy_sources/cotacaopython/bi/mongo_cotaceos.csv",
+          "size": 56929,
+          "sha256": "610ddbd721f732e26eb2a1f6b9d72a0312ea0ca6f6485a8d390d56b99c68603f"
+        },
+        {
+          "source_path": "calculadora.py",
+          "archive_path": "legacy_sources/cotacaopython/calculadora.py",
+          "size": 3954,
+          "sha256": "19c266905224c36b7d287e2e4b46a95b86abeee25945781966ccf0a9e10ba02b"
+        },
+        {
+          "source_path": "calculadora_cotacao.py",
+          "archive_path": "legacy_sources/cotacaopython/calculadora_cotacao.py",
+          "size": 4132,
+          "sha256": "0d685076a4bd2b01bf86423a939170642680bbe331ae7b0edf350a87b765cbe3"
+        },
+        {
+          "source_path": "datamine.py",
+          "archive_path": "legacy_sources/cotacaopython/datamine.py",
+          "size": 13725,
+          "sha256": "942668d4305be0015d17a4b01490a2915dd40d112c0977a320e265c7dc26bfbc"
+        },
+        {
+          "source_path": "df_historico.py",
+          "archive_path": "legacy_sources/cotacaopython/df_historico.py",
+          "size": 1122,
+          "sha256": "4f5ce489ef5d22b03d6cf730283068890b9661dc137dd15ad9b53a80cccd3aee"
+        },
+        {
+          "source_path": "historico.py",
+          "archive_path": "legacy_sources/cotacaopython/historico.py",
+          "size": 4369,
+          "sha256": "9780609e30ee5f78a18711335dd6e1d960753d2b76474fac5479770202a2fc0a"
+        },
+        {
+          "source_path": "informes.py",
+          "archive_path": "legacy_sources/cotacaopython/informes.py",
+          "size": 1085,
+          "sha256": "5fd6db0cd22c0861c0c7b43259ca2af431f190de32b739e3e64a11ea97b5677a"
+        },
+        {
+          "source_path": "main.py",
+          "archive_path": "legacy_sources/cotacaopython/main.py",
+          "size": 1799,
+          "sha256": "31b41a967e7b7e4c89e314482ea6cda2683a5d9aca3cc770f2f72f780bf1aea5"
+        },
+        {
+          "source_path": "monte_carlo.py",
+          "archive_path": "legacy_sources/cotacaopython/monte_carlo.py",
+          "size": 2690,
+          "sha256": "bd06bdcac59ce478d749e3bfbac7c7070edca17ad676152b046209c94e3781d4"
+        },
+        {
+          "source_path": "requirements.txt",
+          "archive_path": "legacy_sources/cotacaopython/requirements.txt",
+          "size": 394,
+          "sha256": "09c4d6065cb9088def07d30fe1536f9239c2c8c68d7c8a7d672a58421399f0ba"
+        },
+        {
+          "source_path": "runtime.txt",
+          "archive_path": "legacy_sources/cotacaopython/runtime.txt",
+          "size": 13,
+          "sha256": "0f012c1c72e37ae9886374dd209852a5b2997995185585149731d9e0d8e020cf"
+        },
+        {
+          "source_path": "statistica/cluster01.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/cluster01.py",
+          "size": 2042,
+          "sha256": "606581ce12ca04b875273d086437576335057c8016d473444b78d4e0a00030b1"
+        },
+        {
+          "source_path": "statistica/cluster02.ipynb",
+          "archive_path": "legacy_sources/cotacaopython/statistica/cluster02.ipynb",
+          "size": 35888,
+          "sha256": "0ad28c7afe381a7554bf960f21b5cbe708fe1fd7b1742c8dd58eb430262dca50"
+        },
+        {
+          "source_path": "statistica/financa.ipynb",
+          "archive_path": "legacy_sources/cotacaopython/statistica/financa.ipynb",
+          "size": 4165165,
+          "sha256": "d32e2da3d429806402d0b5fce46043af46b73fa4994ce49dae196b0584840b75"
+        },
+        {
+          "source_path": "statistica/grafico_dinamico.ipynb",
+          "archive_path": "legacy_sources/cotacaopython/statistica/grafico_dinamico.ipynb",
+          "size": 20704,
+          "sha256": "c07e292bed1ee72d96f7dbdff35b4ad24fbe57d89685990873bec57f31b70983"
+        },
+        {
+          "source_path": "statistica/hist/ABCP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ABCP11.csv",
+          "size": 1622,
+          "sha256": "e03f49709eab143b8ca0e92b4e09d9e7d98caf9daa3de83e22bfea6c9cb240d1"
+        },
+        {
+          "source_path": "statistica/hist/AFHI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/AFHI11.csv",
+          "size": 374,
+          "sha256": "1f4e2656026042aa2970ca644e64ae70b003f11c9eca4cdb1335b23b62a4a2a5"
+        },
+        {
+          "source_path": "statistica/hist/AFOF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/AFOF11.csv",
+          "size": 386,
+          "sha256": "ba392805fd179dba5423792adfdab9ef51788db8d649cac4ed643f7be59fe9ac"
+        },
+        {
+          "source_path": "statistica/hist/AIEC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/AIEC11.csv",
+          "size": 554,
+          "sha256": "87b059c8817652415b479557a56d9c183a5508e6ed000f0dfdaebfeff28a9bc8"
+        },
+        {
+          "source_path": "statistica/hist/ALMI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ALMI11.csv",
+          "size": 200,
+          "sha256": "220cd8b9fd99cd3435546b9f29e8f1c9472afff6600e2735cba820462d4bc176"
+        },
+        {
+          "source_path": "statistica/hist/ALZR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ALZR11.csv",
+          "size": 1803,
+          "sha256": "cf89f19c80ac19c8605e569e59ae03853128d712e483abd9372da820912960fd"
+        },
+        {
+          "source_path": "statistica/hist/APTO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/APTO11.csv",
+          "size": 213,
+          "sha256": "2b64f8c523a6f6d5bdc0bbb002348f5eeabb5e88995e642126eb66085d525912"
+        },
+        {
+          "source_path": "statistica/hist/ARCT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ARCT11.csv",
+          "size": 886,
+          "sha256": "1887f3a3c25e2ef3f929b48bf89ad094fde62829575b311e4d416a5c8fc6d3e8"
+        },
+        {
+          "source_path": "statistica/hist/ARRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ARRI11.csv",
+          "size": 1021,
+          "sha256": "652efcca7590f3230ae4b092ab337578d94f73f8c6e0c2e7f997718da159124e"
+        },
+        {
+          "source_path": "statistica/hist/ATSA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ATSA11.csv",
+          "size": 342,
+          "sha256": "bab8605b8efe0185f901ab205d2e6014be35956d3aac9e78feb92f77e0b42b07"
+        },
+        {
+          "source_path": "statistica/hist/BARI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BARI11.csv",
+          "size": 898,
+          "sha256": "47bda20e50c41608079dc1ada328ef4a49717452fcf1419cb70ae4903dd243ec"
+        },
+        {
+          "source_path": "statistica/hist/BBFI11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBFI11B.csv",
+          "size": 2498,
+          "sha256": "d6020d62efd425cb023a77f3e46ba138f699faa5da7dcc0fd4b791f87b4d82a0"
+        },
+        {
+          "source_path": "statistica/hist/BBFO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBFO11.csv",
+          "size": 477,
+          "sha256": "d125851de97dbfefd1bd05fa1381777d5b224a3cfb80eb94b3bf7d98fac20759"
+        },
+        {
+          "source_path": "statistica/hist/BBGO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBGO11.csv",
+          "size": 3180,
+          "sha256": "2e0d3de2ff3d6e8810f9ef083fbcda32b8de142b83d1ae2ad4e5237abf506d91"
+        },
+        {
+          "source_path": "statistica/hist/BBIM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBIM11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/BBPO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBPO11.csv",
+          "size": 2110,
+          "sha256": "99025737d5cb72aca60e4959f2958a82116dc600118e7e0a7584d4de993579ef"
+        },
+        {
+          "source_path": "statistica/hist/BBRC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BBRC11.csv",
+          "size": 1859,
+          "sha256": "1dbd3deacc7ba99edb2cc36c4cbd6f5702de8d0f8a7f98e9629d0f6783b920fa"
+        },
+        {
+          "source_path": "statistica/hist/BCFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BCFF11.csv",
+          "size": 1795,
+          "sha256": "47100f890c7dc1c8fea7d687280b4182db964df18a0c827788daadf66b6bdff2"
+        },
+        {
+          "source_path": "statistica/hist/BCIA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BCIA11.csv",
+          "size": 1628,
+          "sha256": "eeab4015aa87cfdcde4cee44da1c1bc71049b44fed9e4aac580cb350dd2a2b65"
+        },
+        {
+          "source_path": "statistica/hist/BCRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BCRI11.csv",
+          "size": 1865,
+          "sha256": "09557c3e003cac6d26bea6391ae62316df6476d8e9387df317d643a28ddfd82a"
+        },
+        {
+          "source_path": "statistica/hist/BICE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BICE11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/BICR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BICR11.csv",
+          "size": 742,
+          "sha256": "2784e48eb778ed5bc556705f3084090bb42635d017df89c902428a2ebd6580bc"
+        },
+        {
+          "source_path": "statistica/hist/BIME11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BIME11.csv",
+          "size": 229,
+          "sha256": "6ebe015f50118df6433cfbc0b961c1b4086cbd824ef6d875183e64df50061785"
+        },
+        {
+          "source_path": "statistica/hist/BLCA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLCA11.csv",
+          "size": 47,
+          "sha256": "de9d3ebf6bc274e866f7592a85e69f7f8946e85255b4c2abb8690c86addafc6c"
+        },
+        {
+          "source_path": "statistica/hist/BLCP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLCP11.csv",
+          "size": 653,
+          "sha256": "2f69d24ab34972d56c42f599eaa67a7a47dec4cb79d668c98ea88aabe27103aa"
+        },
+        {
+          "source_path": "statistica/hist/BLMC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLMC11.csv",
+          "size": 289,
+          "sha256": "c17fcdb81f7964fb2a89432e1d7dfe2f6eb50db95c40e37e85b0c1b67180f666"
+        },
+        {
+          "source_path": "statistica/hist/BLMG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLMG11.csv",
+          "size": 428,
+          "sha256": "74217d1f48ac5ce848af8eccd25dce1d8cd62768d6686eeaecea99001d0c3e47"
+        },
+        {
+          "source_path": "statistica/hist/BLMO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLMO11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/BLMR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BLMR11.csv",
+          "size": 482,
+          "sha256": "e297caeb6aa024f647e9fc694eeade31df5c04722ba219bb83b5f82d47104c93"
+        },
+        {
+          "source_path": "statistica/hist/BMLC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BMLC11.csv",
+          "size": 2013,
+          "sha256": "4797800d86a539aeff72ee6717618ccc21e9bd313b1f1b8a43be6c6e82e78020"
+        },
+        {
+          "source_path": "statistica/hist/BNFS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BNFS11.csv",
+          "size": 2177,
+          "sha256": "7a115c44905b0c6d0c84af17a6f664fa68d9a316f554cfb272a779c16f777ec8"
+        },
+        {
+          "source_path": "statistica/hist/BPFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BPFF11.csv",
+          "size": 1776,
+          "sha256": "77a15e1f9b117892098d0279ad868f794c58f7d786edc21ef08345b37297deb5"
+        },
+        {
+          "source_path": "statistica/hist/BPML11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BPML11.csv",
+          "size": 468,
+          "sha256": "feab10d51fe9e95e69128acdbc7fca4ad3d5f567cc9882c89dd5356c6d8d4cff"
+        },
+        {
+          "source_path": "statistica/hist/BRCO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BRCO11.csv",
+          "size": 807,
+          "sha256": "1b921eb1d5305d291cb08467ce23c2fdef3dd18f0ea2ed7304c708a523e6ac31"
+        },
+        {
+          "source_path": "statistica/hist/BRCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BRCR11.csv",
+          "size": 1994,
+          "sha256": "63786ef8bf77bfdc20a7238f31cad7f1c9971b5d892a61c6bb3e7ed346ca0ec1"
+        },
+        {
+          "source_path": "statistica/hist/BREV11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BREV11.csv",
+          "size": 238,
+          "sha256": "b285b49c434344ac78d8e46115f49c0569b4c4ca76357150a7622e2d928a3b8e"
+        },
+        {
+          "source_path": "statistica/hist/BRLA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BRLA11.csv",
+          "size": 55,
+          "sha256": "70bf14b9764a7a5e5b6be0f8b8e1fb9b2ad200dfb97441f9ba13338a1e761853"
+        },
+        {
+          "source_path": "statistica/hist/BTAL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTAL11.csv",
+          "size": 490,
+          "sha256": "a2a8a8c0b252fa932ce57682d8c9da985e3ed3d0973a0e12542c7476e0b5efe5"
+        },
+        {
+          "source_path": "statistica/hist/BTCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTCR11.csv",
+          "size": 1097,
+          "sha256": "4494a5871fa5f116cb862605a13d8be1022b33aadfea7b4ce51c22d09ea4d54f"
+        },
+        {
+          "source_path": "statistica/hist/BTLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTLG11.csv",
+          "size": 1981,
+          "sha256": "e06328b68e8727884e6fd13a5d1ce94739000c5a5c41a03689c61b2aaff9bd56"
+        },
+        {
+          "source_path": "statistica/hist/BTRA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTRA11.csv",
+          "size": 367,
+          "sha256": "741f8abd5b9cc3d225b283e8d7f6a5ea0f8900e8fe697cfb784ca79c7110b002"
+        },
+        {
+          "source_path": "statistica/hist/BTSG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTSG11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/BTWR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BTWR11.csv",
+          "size": 73,
+          "sha256": "bfa1ecde6c0cda42350ab5e19e5d4e0dd9c9c9a0e51894eda955a2481f3af04d"
+        },
+        {
+          "source_path": "statistica/hist/BZLI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/BZLI11.csv",
+          "size": 9960,
+          "sha256": "e47e3d7dd6946aabbd3003a035207d394dd9bba1b059e0d52da65d999f152bff"
+        },
+        {
+          "source_path": "statistica/hist/CACR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CACR11.csv",
+          "size": 641,
+          "sha256": "51eccf43f050d0fed117169bd6100318e852adc71bdb1b91eee7f195c2d1e2e8"
+        },
+        {
+          "source_path": "statistica/hist/CARE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CARE11.csv",
+          "size": 321,
+          "sha256": "48a0e5ac56222644419569ffd15f8eb962b376c4762c3c8a4de9e4f3bf9719bc"
+        },
+        {
+          "source_path": "statistica/hist/CBOP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CBOP11.csv",
+          "size": 1787,
+          "sha256": "2455a8a87309fddb5dfc67288aa9f7f28a6683bdd5696da5e734545dc0ab351c"
+        },
+        {
+          "source_path": "statistica/hist/CCRF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CCRF11.csv",
+          "size": 264,
+          "sha256": "65a2d35a45ac20966375c94d2b73ac7dab57e2117da25790fa82ae452d6aa02b"
+        },
+        {
+          "source_path": "statistica/hist/CEOC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CEOC11.csv",
+          "size": 1992,
+          "sha256": "1126ba240cb2637a6be4d4b0ea3a5c8823198f12228f99a5a64316b0826ca39c"
+        },
+        {
+          "source_path": "statistica/hist/CJCT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CJCT11.csv",
+          "size": 526,
+          "sha256": "d19a6b2177193c6e30754e82983b75cc474a684fce8f265e1e02765b48a9406e"
+        },
+        {
+          "source_path": "statistica/hist/CNES11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CNES11.csv",
+          "size": 2366,
+          "sha256": "00796088d6681e73a1f50f9e282471dd9ff62629ebbec8177303c87c61203f9e"
+        },
+        {
+          "source_path": "statistica/hist/CORM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CORM11.csv",
+          "size": 365,
+          "sha256": "42a5989f81fbb427355bdff0a308f0102a6a9649c8a5abc374eada819588d1c9"
+        },
+        {
+          "source_path": "statistica/hist/CPFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CPFF11.csv",
+          "size": 787,
+          "sha256": "bf07ac0c4818ddd1888f22b3d2931745e34e8e4b0b0f6af56de4c5305959bed1"
+        },
+        {
+          "source_path": "statistica/hist/CPTS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CPTS11.csv",
+          "size": 1831,
+          "sha256": "def6b710a0d75c90b20cbf4ffd2c5d10df2ee6641b29ad519ee66f8dfa23d4bd"
+        },
+        {
+          "source_path": "statistica/hist/CRFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CRFF11.csv",
+          "size": 957,
+          "sha256": "dcadad16469d7f58cd516b62974eb9bcab6bfc0b2ceacf2611774ee775b55b18"
+        },
+        {
+          "source_path": "statistica/hist/CTXT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CTXT11.csv",
+          "size": 1613,
+          "sha256": "85bb0cf3a271ff6739b8790c3bd1287ac60ecc7ec6fa4c00248aa52a53932009"
+        },
+        {
+          "source_path": "statistica/hist/CVBI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CVBI11.csv",
+          "size": 934,
+          "sha256": "6d1fa73c0ec0eba4ce883f835ce696b43f522472096d0dafeb3306b4acaa8df2"
+        },
+        {
+          "source_path": "statistica/hist/CXAG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXAG11.csv",
+          "size": 192,
+          "sha256": "eeb94bbb7bdb1bdfdf62426a8b8950fff6eec25898ceec51bfb1bf15fa3e79e2"
+        },
+        {
+          "source_path": "statistica/hist/CXCE11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXCE11B.csv",
+          "size": 2588,
+          "sha256": "db11a31be211d63a3ddc009ab9f9c4fab36f10418a39b8b4398d8c69bc15723b"
+        },
+        {
+          "source_path": "statistica/hist/CXCI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXCI11.csv",
+          "size": 138,
+          "sha256": "c67c31f701e572f4bd99c17f8c168bc283cc833f7987ffa9f2b5f12acc0cf2d6"
+        },
+        {
+          "source_path": "statistica/hist/CXCO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXCO11.csv",
+          "size": 425,
+          "sha256": "787b91d1b0f0bb03e9a82df2d5747162cf22b05f9cad221ac5ed390a0edddaf7"
+        },
+        {
+          "source_path": "statistica/hist/CXRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXRI11.csv",
+          "size": 1679,
+          "sha256": "d0269fa67f79d63d059069d518fd70a4ba8117472467b0676e2f688e4eaed3f1"
+        },
+        {
+          "source_path": "statistica/hist/CXTL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CXTL11.csv",
+          "size": 1513,
+          "sha256": "8c3790f60e9f0a09d49a7970b5d0d383a4fa9f5e8462b7f81204b86e6a5e96aa"
+        },
+        {
+          "source_path": "statistica/hist/CYCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/CYCR11.csv",
+          "size": 251,
+          "sha256": "9bc3403ac5f3affa972e8ad26aeb1bb6065513494cfd024d34a38c9f6e186d45"
+        },
+        {
+          "source_path": "statistica/hist/DEVA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/DEVA11.csv",
+          "size": 542,
+          "sha256": "9eb95e849e9eddae9a5d8668b2a444730f283f8e12053ec63898d96da0eb9552"
+        },
+        {
+          "source_path": "statistica/hist/DRIT11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/DRIT11B.csv",
+          "size": 1354,
+          "sha256": "bd704082f627a84e4b0de1aa4750d8cb05f15b2ebe750a37790098d067efa9a1"
+        },
+        {
+          "source_path": "statistica/hist/DVFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/DVFF11.csv",
+          "size": 303,
+          "sha256": "ff8ed8ee9a3674f05e907290cc4bcc0108df0f59cc22059b245e1aa5683772bf"
+        },
+        {
+          "source_path": "statistica/hist/EDFO11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/EDFO11B.csv",
+          "size": 1538,
+          "sha256": "71c30aeefc3dd401d3ee94812809173c25c3cb926d748ac4d92fba6b7a7f4b69"
+        },
+        {
+          "source_path": "statistica/hist/EDGA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/EDGA11.csv",
+          "size": 2390,
+          "sha256": "ba8b60cf2659d2623d6756ae92a4ff3dfe84fe07eb74cc8bf28f642c446db88b"
+        },
+        {
+          "source_path": "statistica/hist/EQIR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/EQIR11.csv",
+          "size": 200,
+          "sha256": "9164c5c0d25a1e9d2e69965d926a1e99cf649607c082e13dd5000eaba18e84fc"
+        },
+        {
+          "source_path": "statistica/hist/ERCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ERCR11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/ERPA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ERPA11.csv",
+          "size": 84,
+          "sha256": "46a55bac9cb1e7c2169b108b3e06bc87e4432b803e1b07c33c8a95b7178316ee"
+        },
+        {
+          "source_path": "statistica/hist/EURO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/EURO11.csv",
+          "size": 1756,
+          "sha256": "8655fb7e4c5caeb03e2198134caebc32b1f459ae15cf2b7aed732149638dd45f"
+        },
+        {
+          "source_path": "statistica/hist/EVBI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/EVBI11.csv",
+          "size": 313,
+          "sha256": "0bdd2d617897d61ad0cb8a9cc02db1448897c80248caa2d207ac003c970c4712"
+        },
+        {
+          "source_path": "statistica/hist/FAED11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FAED11.csv",
+          "size": 2428,
+          "sha256": "9b4b5104bad14fdd35532b877c999ae9ebe3e13273bcadd0927e7e93cca3a5af"
+        },
+        {
+          "source_path": "statistica/hist/FAMB11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FAMB11B.csv",
+          "size": 1570,
+          "sha256": "f79b7a25861df70deaef31fc91a08bac341a066cd777da6a8f2090145aff225b"
+        },
+        {
+          "source_path": "statistica/hist/FATN11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FATN11.csv",
+          "size": 515,
+          "sha256": "2ecf61d3229a691a2406d81d33cb1bd60d344184fca2b212199d100ea7323001"
+        },
+        {
+          "source_path": "statistica/hist/FCFL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FCFL11.csv",
+          "size": 2402,
+          "sha256": "471b001552fc0d2d0fe716e6bb56244ebb8800b114969d81c4ae9d3fd201d651"
+        },
+        {
+          "source_path": "statistica/hist/FEXC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FEXC11.csv",
+          "size": 1834,
+          "sha256": "b2cfd7480ba41397ad48b589dac43b33a17df3bfda7dd25a9708cda402630f09"
+        },
+        {
+          "source_path": "statistica/hist/FIGS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FIGS11.csv",
+          "size": 2192,
+          "sha256": "17fa2a391353f480907eb8181925555f54fa2b5b3111a280150830084be2d5b1"
+        },
+        {
+          "source_path": "statistica/hist/FIIB11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FIIB11.csv",
+          "size": 1679,
+          "sha256": "1bc3b8556acb28ce6e794a12a5d546e95a385112e6665c78528cc58d3561ef0d"
+        },
+        {
+          "source_path": "statistica/hist/FIIP11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FIIP11B.csv",
+          "size": 2039,
+          "sha256": "d22f1ac9ee60d15fb1d8fdf166aa8ceb26481a13d79f4e74e537b4991eba7797"
+        },
+        {
+          "source_path": "statistica/hist/FISC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FISC11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/FIVN11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FIVN11.csv",
+          "size": 23122,
+          "sha256": "c19732d1759082a29a4a77283515bc8ff647f6ef13912654af3bdee8ec20c82c"
+        },
+        {
+          "source_path": "statistica/hist/FLCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FLCR11.csv",
+          "size": 465,
+          "sha256": "265d02124085aaad27b372d700af9437d31fc65c55a9b9f9edadd8be5686899e"
+        },
+        {
+          "source_path": "statistica/hist/FLMA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FLMA11.csv",
+          "size": 1754,
+          "sha256": "93f91fb0aeee2edd0b960ecb4e91a2e0640e4d9f2f5e9ae60957b07f41ce7ac7"
+        },
+        {
+          "source_path": "statistica/hist/FLRP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FLRP11.csv",
+          "size": 1856,
+          "sha256": "1a48db773a296bd0b972f14d84b904895cdbd492007d7102a659287b7547a978"
+        },
+        {
+          "source_path": "statistica/hist/FMOF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FMOF11.csv",
+          "size": 613,
+          "sha256": "334d4dfd84db9236b8b6c869512bef4e0405f49b5aacc8a01a86b6e4934263f8"
+        },
+        {
+          "source_path": "statistica/hist/FPAB11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FPAB11.csv",
+          "size": 1623,
+          "sha256": "ffffcf91c3d099de642b1fba38d9a0c07df76b7e0e839ddf2eeb5c7a301fccac"
+        },
+        {
+          "source_path": "statistica/hist/FVPQ11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/FVPQ11.csv",
+          "size": 1056,
+          "sha256": "15a64b32bf71f9af0ee0c799fd0b072f0b1115cc6353bb5c8342fdc431a014dd"
+        },
+        {
+          "source_path": "statistica/hist/GALG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GALG11.csv",
+          "size": 546,
+          "sha256": "a66b3de1ab037853b8436fe6cc9787d592d2cf0e9d6282017d5bce88736475dc"
+        },
+        {
+          "source_path": "statistica/hist/GAME11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GAME11.csv",
+          "size": 188,
+          "sha256": "51a19148dc5d5f6c18a06e36f2552931dd7d6f68a936a8ea62ba2089c71d5cbc"
+        },
+        {
+          "source_path": "statistica/hist/GCFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GCFF11.csv",
+          "size": 692,
+          "sha256": "e62c291a6e2e5c682bc944590277786b5e2c515c665265b52091596d18b87276"
+        },
+        {
+          "source_path": "statistica/hist/GCRA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GCRA11.csv",
+          "size": 3517,
+          "sha256": "dfefd18664a6674802d0f1c39ee988bd0b32a2d27b6e9854b2d473c405e4a5e5"
+        },
+        {
+          "source_path": "statistica/hist/GCRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GCRI11.csv",
+          "size": 437,
+          "sha256": "30d4c8607a2d94e505fa525d1d626674f447d75f3de4254f31b7e9cbda152fda"
+        },
+        {
+          "source_path": "statistica/hist/GESE11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GESE11B.csv",
+          "size": 55,
+          "sha256": "87bbc43ec494ee4460915a4852fbe31e0f83748c3da7027877e2fd88a31e7fb6"
+        },
+        {
+          "source_path": "statistica/hist/GGRC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GGRC11.csv",
+          "size": 1704,
+          "sha256": "1f8c45d975571b3ef3c0638fbded1c79498dbbd359a0c733372d116fc62a3228"
+        },
+        {
+          "source_path": "statistica/hist/GSFI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GSFI11.csv",
+          "size": 17231,
+          "sha256": "002f4645277be73c84ccdba15cdc25e2a42e1cab958a1d48ec2b3068c091e9b9"
+        },
+        {
+          "source_path": "statistica/hist/GTLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GTLG11.csv",
+          "size": 161,
+          "sha256": "901842091a8ee3675f1c4b7d304c76fa688b3f449e34f880ffe779a2186d6670"
+        },
+        {
+          "source_path": "statistica/hist/GTWR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/GTWR11.csv",
+          "size": 1109,
+          "sha256": "c0394102ce88f007cd5be0c037506996566a0887e80aa0d8ed6f3850c6b45b93"
+        },
+        {
+          "source_path": "statistica/hist/HAAA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HAAA11.csv",
+          "size": 384,
+          "sha256": "c8241a1461865ca73e1e08405bfc6c195b1ff9f45b0d3a8b341048cfc2f4c4fb"
+        },
+        {
+          "source_path": "statistica/hist/HABT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HABT11.csv",
+          "size": 858,
+          "sha256": "1659d917696a36c01992879453063106db3d51b961a07b538338bf4c8353f424"
+        },
+        {
+          "source_path": "statistica/hist/HBRH11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HBRH11.csv",
+          "size": 788,
+          "sha256": "9c99e8d5799a0a404d61dd9ba9cddb89945c438ccc16c005c6243fe4bc29eb07"
+        },
+        {
+          "source_path": "statistica/hist/HCHG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HCHG11.csv",
+          "size": 285,
+          "sha256": "082f9bb278e70db704dcd7829aab7581e18bc07b17b8b1ce0eb1df81507f4194"
+        },
+        {
+          "source_path": "statistica/hist/HCRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HCRI11.csv",
+          "size": 2074,
+          "sha256": "4a79571dd4d285344a962270377e5116904a35626ddad716f58b42ac7fe8d704"
+        },
+        {
+          "source_path": "statistica/hist/HCTR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HCTR11.csv",
+          "size": 945,
+          "sha256": "7368fd6e70e02b0fbb37e313a9f43b4ccdfa2353fc2f3351c2d7d778c6bef425"
+        },
+        {
+          "source_path": "statistica/hist/HFOF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HFOF11.csv",
+          "size": 1337,
+          "sha256": "3d038bdbc5531cac34751f0a06397b6f6d7eeaf0138901779864cd8c9c0c2f55"
+        },
+        {
+          "source_path": "statistica/hist/HGBS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGBS11.csv",
+          "size": 1863,
+          "sha256": "756146ec036ed11030a90abc7cd735ca46b05813143bc0f01d63cf67919a7eaa"
+        },
+        {
+          "source_path": "statistica/hist/HGCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGCR11.csv",
+          "size": 1780,
+          "sha256": "9289b6868c0f4154de2b4552a8763cf52d9af35360ee14df049eaff176e4ee43"
+        },
+        {
+          "source_path": "statistica/hist/HGFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGFF11.csv",
+          "size": 902,
+          "sha256": "7376722951cdffb360fd9b99873d46cca101b389874087bc04999c7d5bafb0b4"
+        },
+        {
+          "source_path": "statistica/hist/HGIC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGIC11.csv",
+          "size": 443,
+          "sha256": "8023ae437a1195d06d578b0cbc30ed883f02950031bfa7e1f8f4c2d435f7f339"
+        },
+        {
+          "source_path": "statistica/hist/HGLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGLG11.csv",
+          "size": 1749,
+          "sha256": "29eba58aff58c92a8a932f94d9d4d58ad0667099723a3b2879b508b6600a8fb7"
+        },
+        {
+          "source_path": "statistica/hist/HGPO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGPO11.csv",
+          "size": 988,
+          "sha256": "3cc76c93c11508304970f30408ed81ec8c850f66a8bb5e5312e4aa5bbefe6022"
+        },
+        {
+          "source_path": "statistica/hist/HGRE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGRE11.csv",
+          "size": 1803,
+          "sha256": "13d4b484642b782ce5c50f60122ec26b12e6236e9d19d849d845c253a3159b19"
+        },
+        {
+          "source_path": "statistica/hist/HGRS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGRS11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/HGRU11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HGRU11.csv",
+          "size": 1262,
+          "sha256": "6c2f95a2011eb1a1ec897ac25d889b651a35e957025b6bb3206614b144417e83"
+        },
+        {
+          "source_path": "statistica/hist/HLOG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HLOG11.csv",
+          "size": 802,
+          "sha256": "d8844e57651a822054bf452b5e66454160ed19c7763334277a27db9f91bdbea4"
+        },
+        {
+          "source_path": "statistica/hist/HOSI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HOSI11.csv",
+          "size": 643,
+          "sha256": "9009908d8cf2da5fd20842e42274efe1fb250071052a43dc09b12903d94fb601"
+        },
+        {
+          "source_path": "statistica/hist/HPDP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HPDP11.csv",
+          "size": 644,
+          "sha256": "ac657b755758dc6c0c1a605bbe24f145659afdb123724d08e13b25d70d965253"
+        },
+        {
+          "source_path": "statistica/hist/HRDF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HRDF11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/HREC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HREC11.csv",
+          "size": 478,
+          "sha256": "cd7786b62880f9b5ae8dba6d9d33054310cf0e56750990e2c0499d3e5bf4a6e4"
+        },
+        {
+          "source_path": "statistica/hist/HSAF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HSAF11.csv",
+          "size": 596,
+          "sha256": "a96d36ed46b5dc5d451a1dd981b0225b5acc97b2d859e865b863fc9688ec5bfc"
+        },
+        {
+          "source_path": "statistica/hist/HSLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HSLG11.csv",
+          "size": 513,
+          "sha256": "b11edc25522a4054e8c41bf87f4f45424ab5d214427696417aa9b3409923e711"
+        },
+        {
+          "source_path": "statistica/hist/HSML11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HSML11.csv",
+          "size": 915,
+          "sha256": "267f49de13344a63dd2480960697a3621fde5fb0a395a962af132219f28971b2"
+        },
+        {
+          "source_path": "statistica/hist/HSRE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HSRE11.csv",
+          "size": 166,
+          "sha256": "94a0b03a044299aa02a83193522e6dedb9e1b72f026e973951ddd71472403753"
+        },
+        {
+          "source_path": "statistica/hist/HTMX11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HTMX11.csv",
+          "size": 1581,
+          "sha256": "e149ce9e74e402904756a59b84a2cea03b41e0c09230611f1132ef367ef4352d"
+        },
+        {
+          "source_path": "statistica/hist/HUSC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HUSC11.csv",
+          "size": 745,
+          "sha256": "1a3048a55d5eab41d9ab7e65c99de8a7e89a482e86b1077c06cadd3670da0cbe"
+        },
+        {
+          "source_path": "statistica/hist/HUSI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/HUSI11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/IBCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/IBCR11.csv",
+          "size": 331,
+          "sha256": "ecfc113ac96de272bf1c9a705c9736b3e3a90e0311362cb45978e1e7e788c044"
+        },
+        {
+          "source_path": "statistica/hist/IBFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/IBFF11.csv",
+          "size": 968,
+          "sha256": "c731ed0d05ed750c995827224fc301d9a6961cfa8c34a138502600734b9f2ca9"
+        },
+        {
+          "source_path": "statistica/hist/IDFI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/IDFI11.csv",
+          "size": 497,
+          "sha256": "cd257090203324ced9ba0f02c5391783979cee5d00004cbefbab6b82c064f6c3"
+        },
+        {
+          "source_path": "statistica/hist/IRDM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/IRDM11.csv",
+          "size": 1830,
+          "sha256": "07baea7d54aa991cb20ac4c3b7bec236fe53f732f4e2c4ad1b662b30824a15e1"
+        },
+        {
+          "source_path": "statistica/hist/IRIM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/IRIM11.csv",
+          "size": 402,
+          "sha256": "b4c1e88bee382cf48c8c3ff116ee023ec08dd87d399813fa292e24daba90be3e"
+        },
+        {
+          "source_path": "statistica/hist/ITIP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ITIP11.csv",
+          "size": 434,
+          "sha256": "679b4a4c3e5ccce1206c40500f19e8949f2f74c88ac41d314ef51cde27ee3727"
+        },
+        {
+          "source_path": "statistica/hist/ITIT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ITIT11.csv",
+          "size": 504,
+          "sha256": "ac73917b38809eba242f6051b0d0fbf51bcdffa45eb5c25bcdb4bda0adefab65"
+        },
+        {
+          "source_path": "statistica/hist/JFLL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JFLL11.csv",
+          "size": 460,
+          "sha256": "4d2de8ceb69c2e292f674003872d85c6f3c1860e888679afd053fa0961e4bb1c"
+        },
+        {
+          "source_path": "statistica/hist/JGPX11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JGPX11.csv",
+          "size": 3675,
+          "sha256": "e0648babcd6981c5a36c7c16aeb5cfd286a6ec77d1263c508b23a6b888eedc17"
+        },
+        {
+          "source_path": "statistica/hist/JPPA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JPPA11.csv",
+          "size": 700,
+          "sha256": "f5b6d9e95611b24539392435edeb3bc393898ec0b77465e2e8f9fbcbae667284"
+        },
+        {
+          "source_path": "statistica/hist/JRDM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JRDM11.csv",
+          "size": 2038,
+          "sha256": "4b7989c1005d8d212d3c64ab5a2d7950c8d116bedfefcaeb8bbb28c45e8231a2"
+        },
+        {
+          "source_path": "statistica/hist/JSAF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JSAF11.csv",
+          "size": 234,
+          "sha256": "68e927414e37c313ef9651c12f638e82cdb173b78c046e098567aca90bd93c5b"
+        },
+        {
+          "source_path": "statistica/hist/JSRE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/JSRE11.csv",
+          "size": 1789,
+          "sha256": "558172aaf60098a7748f2f1ae6b89fc546be4223005afe5774aa70ffcddd11f7"
+        },
+        {
+          "source_path": "statistica/hist/KFOF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KFOF11.csv",
+          "size": 1062,
+          "sha256": "0a9d2c5f13f13ed93610990f80dec9ff44b0f3e5e065fbd99ac9b7d804d8539c"
+        },
+        {
+          "source_path": "statistica/hist/KINP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KINP11.csv",
+          "size": 1002,
+          "sha256": "a8b883a0b264b1dc33e0e89225d2310a24a6f773198f3b6e549b1fccedf239a6"
+        },
+        {
+          "source_path": "statistica/hist/KISU11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KISU11.csv",
+          "size": 484,
+          "sha256": "078e670127acca1bd689bc1bc2241534f2852bbd087e48675d13f90fda10bce8"
+        },
+        {
+          "source_path": "statistica/hist/KNCA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNCA11.csv",
+          "size": 3576,
+          "sha256": "75cc2c75a28d7ee7db0b7335f61228662c0c39eedbe1a0d9aa7e7b74d6c251f2"
+        },
+        {
+          "source_path": "statistica/hist/KNCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNCR11.csv",
+          "size": 1832,
+          "sha256": "7ab1153bcc0f0988b64536e5bb021615844a13a5faf07d0753105898b06a81ed"
+        },
+        {
+          "source_path": "statistica/hist/KNHY11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNHY11.csv",
+          "size": 1274,
+          "sha256": "74ea292d990d2ff90b9cc84db450d11f68c42d1934e17df0f61a517882dde35f"
+        },
+        {
+          "source_path": "statistica/hist/KNIP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNIP11.csv",
+          "size": 1697,
+          "sha256": "85b1e2f520f651915c38d2055f388f74e1fd42c4723d691ed83c52b1cd324ffd"
+        },
+        {
+          "source_path": "statistica/hist/KNRE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNRE11.csv",
+          "size": 1529,
+          "sha256": "c122d1f8d0f7984a67a6045161f24d94be296bc5bee74ab40bf3de458d43bc83"
+        },
+        {
+          "source_path": "statistica/hist/KNRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNRI11.csv",
+          "size": 1919,
+          "sha256": "1d04fa22943c527806439370407dbf576d69f27dff57c1a4c6415110d2937599"
+        },
+        {
+          "source_path": "statistica/hist/KNSC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/KNSC11.csv",
+          "size": 561,
+          "sha256": "2445814393f9206a58f30b13381b44605b7297d4f73f3a660eab61c3767d13b4"
+        },
+        {
+          "source_path": "statistica/hist/LASC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/LASC11.csv",
+          "size": 524,
+          "sha256": "b198769bc1c1935cda0182b9c92c38d7f93dc358247f9a8891912e094150214d"
+        },
+        {
+          "source_path": "statistica/hist/LFTT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/LFTT11.csv",
+          "size": 324,
+          "sha256": "381d19077146e536d34ecbd3db9d13a4fbbfb9c7f8d01471d6a2366dfb52b1b4"
+        },
+        {
+          "source_path": "statistica/hist/LGCP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/LGCP11.csv",
+          "size": 821,
+          "sha256": "d3c1eef8dfa98c72177c012855fa708825d633aa2dd6d90f594b41076c3a7bdd"
+        },
+        {
+          "source_path": "statistica/hist/LUGG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/LUGG11.csv",
+          "size": 823,
+          "sha256": "19e0034142965de7e0d4b464a457e72b31521dc01246550d32437440a7006fbc"
+        },
+        {
+          "source_path": "statistica/hist/LVBI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/LVBI11.csv",
+          "size": 1201,
+          "sha256": "12965e51e2132bac85b2026e4e3129a7cdfbcee9ccd5312399e6f5259cec526a"
+        },
+        {
+          "source_path": "statistica/hist/MALL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MALL11.csv",
+          "size": 1384,
+          "sha256": "edecbe20f22e34336c329e1aea7281057351b0f93dbb9b0a15d09754d78c684e"
+        },
+        {
+          "source_path": "statistica/hist/MATV11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MATV11.csv",
+          "size": 135,
+          "sha256": "20a2208ab77859e4b75deb303335e59a0cc8060df18160ffb6e93b71891128ff"
+        },
+        {
+          "source_path": "statistica/hist/MAXR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MAXR11.csv",
+          "size": 2442,
+          "sha256": "e2791658d7f9180535ce20898465db228bcd5e87a6f4d929d7396f273cafc421"
+        },
+        {
+          "source_path": "statistica/hist/MBRF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MBRF11.csv",
+          "size": 1772,
+          "sha256": "56cfad44fb50f6c64370f2e00b0cee0d216ff30445030a5563c269e5718d0f05"
+        },
+        {
+          "source_path": "statistica/hist/MCCI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MCCI11.csv",
+          "size": 864,
+          "sha256": "7be16a5ed182f91727010db0de1c49ea0e30cee0d48090222ea0fdcc077249d1"
+        },
+        {
+          "source_path": "statistica/hist/MCHF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MCHF11.csv",
+          "size": 351,
+          "sha256": "4fede375742ec6b06a6efcfaf468125692974e945dc8c9a7b5c912b12cf43792"
+        },
+        {
+          "source_path": "statistica/hist/MCHY11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MCHY11.csv",
+          "size": 285,
+          "sha256": "92978a3299be51f87c6e7292b78e1e2ab7d4cc2da82fa8e615b472f70d1120d6"
+        },
+        {
+          "source_path": "statistica/hist/MFAI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MFAI11.csv",
+          "size": 657,
+          "sha256": "cb0d07e1b14f487fcbe06b377657287625049b5913edaacf3c61b28d64460cc0"
+        },
+        {
+          "source_path": "statistica/hist/MFII11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MFII11.csv",
+          "size": 1788,
+          "sha256": "0860664d289d14da2d78c7a12c0ef5b15728a0aa69c682b05115334ec89f56e2"
+        },
+        {
+          "source_path": "statistica/hist/MGCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MGCR11.csv",
+          "size": 511,
+          "sha256": "cae5ceef3625ffe23454fa4f8315caa6e5349e1182af1fa9b93f707ccf895ace"
+        },
+        {
+          "source_path": "statistica/hist/MGFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MGFF11.csv",
+          "size": 1321,
+          "sha256": "ed6711335b32c7a88668a4d06f40763c71a470b46a7104a9e277fe96c6ac4da0"
+        },
+        {
+          "source_path": "statistica/hist/MGHT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MGHT11.csv",
+          "size": 747,
+          "sha256": "8fb8b73a793458566d932955ffa256e5633c43b91086ff58200f6f4569a2c0c3"
+        },
+        {
+          "source_path": "statistica/hist/MGLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MGLG11.csv",
+          "size": 354,
+          "sha256": "a44da07600950804f704de9a4ef035ae551499bc98740195161c0eab6c681339"
+        },
+        {
+          "source_path": "statistica/hist/MORC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MORC11.csv",
+          "size": 256,
+          "sha256": "e7e52d5388e946c4d00fdf592cdf205c2a8026583f1137c506624b4526a77580"
+        },
+        {
+          "source_path": "statistica/hist/MORE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MORE11.csv",
+          "size": 701,
+          "sha256": "2bb2fd9bfc789d68e0e11df69e125ed3fdda038bc2e45e54fbef43b4d3b9202d"
+        },
+        {
+          "source_path": "statistica/hist/MXRF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/MXRF11.csv",
+          "size": 1581,
+          "sha256": "c2ca35e98b86d0d70e9ec0041536489e588520a82235a6a2a71519c2b60b0aae"
+        },
+        {
+          "source_path": "statistica/hist/NAVT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NAVT11.csv",
+          "size": 422,
+          "sha256": "eba6fdf24eb19bb009fd99a0ed244616116226c639ae18f19dbb8ac62a6c431d"
+        },
+        {
+          "source_path": "statistica/hist/NCHB11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NCHB11.csv",
+          "size": 689,
+          "sha256": "997f06fe2a1edc4b2b6b70a98c5e57fb2f17502542188704d391bff330c6f86e"
+        },
+        {
+          "source_path": "statistica/hist/NEWL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NEWL11.csv",
+          "size": 751,
+          "sha256": "6d837d7599a42909f602797d9fcaaa85fa3a3382ba483e9bbdfc8f933db257d5"
+        },
+        {
+          "source_path": "statistica/hist/NEWU11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NEWU11.csv",
+          "size": 1047,
+          "sha256": "04a194537dee0344cd943a61140983680d1fa5634bf30f7dffa02ce6571df874"
+        },
+        {
+          "source_path": "statistica/hist/NSLU11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NSLU11.csv",
+          "size": 2403,
+          "sha256": "6fdf853e4d3fe92a4119fef2861a9ac54d618baac4c0a3fc9c8eee2bbb8685d8"
+        },
+        {
+          "source_path": "statistica/hist/NVHO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NVHO11.csv",
+          "size": 1868,
+          "sha256": "1b52716575c80e596ef164a252c6633a6c7f3feeb29587da46253a0aeddc298e"
+        },
+        {
+          "source_path": "statistica/hist/NVIF11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/NVIF11B.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/ONEF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ONEF11.csv",
+          "size": 1703,
+          "sha256": "c10c5361d5831eef39481ce5d38aaabfaaec25a1896e39d10e54aecda24d7dd1"
+        },
+        {
+          "source_path": "statistica/hist/ORPD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/ORPD11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/OUFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/OUFF11.csv",
+          "size": 1114,
+          "sha256": "953b7808c71dd838fad4e8b3483d4869054c0a0a5bf983bc11a0e5a01300a9d3"
+        },
+        {
+          "source_path": "statistica/hist/OUJP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/OUJP11.csv",
+          "size": 1807,
+          "sha256": "fd47eed9139c0f475fb353c6f548dafa88837b22f06b096c64c5eb15cc3e138b"
+        },
+        {
+          "source_path": "statistica/hist/OULG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/OULG11.csv",
+          "size": 1142,
+          "sha256": "ee6a3fd1069770a502e88ae158532e36cd4800ebea99132da1ba50b7f11a63ed"
+        },
+        {
+          "source_path": "statistica/hist/OURE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/OURE11.csv",
+          "size": 1475,
+          "sha256": "22f0b5c0982d7c7c112f7364fb7a5eeb1f7721805d4b755caf0bd8f5f8118343"
+        },
+        {
+          "source_path": "statistica/hist/PABY11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PABY11.csv",
+          "size": 26305,
+          "sha256": "182dfe77df48fb4c3ac84c22c5711c4816263a4c878add31c53b5208f6b3eddf"
+        },
+        {
+          "source_path": "statistica/hist/PATC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PATC11.csv",
+          "size": 1036,
+          "sha256": "d09c07540233069d63ee62b86884a9ff3609eef83b2fba9cf90bcfc6703ca5c0"
+        },
+        {
+          "source_path": "statistica/hist/PATL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PATL11.csv",
+          "size": 583,
+          "sha256": "016598c4e147bba2f39e7ccd5a60e037cabbcb3f227aff14621c70d070139060"
+        },
+        {
+          "source_path": "statistica/hist/PLCR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PLCR11.csv",
+          "size": 811,
+          "sha256": "49c12575780b4f68192c9f0bc85eaf3a640bcd8fe45fc7fefe8638056ef0c777"
+        },
+        {
+          "source_path": "statistica/hist/PLOG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PLOG11.csv",
+          "size": 432,
+          "sha256": "e907ee0fd96a67aa0e3910ba0454d842b89a3d1895193b7f5f6c9585e362bf11"
+        },
+        {
+          "source_path": "statistica/hist/PLRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PLRI11.csv",
+          "size": 3810,
+          "sha256": "d62fe9a00a54996c7a8526bbcdc3e817c0c9e83369460a8380df4a495c58e802"
+        },
+        {
+          "source_path": "statistica/hist/PORD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PORD11.csv",
+          "size": 1071,
+          "sha256": "d899163d73b14ef716887fbe1e099ea1a5d7edb53a6b15940f081842126d0014"
+        },
+        {
+          "source_path": "statistica/hist/PQAG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PQAG11.csv",
+          "size": 666,
+          "sha256": "fa2014987dba9ae31fdc52786a4f57880efe40e703ab09d216dd6cd936c65cd4"
+        },
+        {
+          "source_path": "statistica/hist/PQDP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PQDP11.csv",
+          "size": 2344,
+          "sha256": "4f879c579027102ef2b66ddbfe35f5af6a6419a566ca02a1aa0982c256a02b2b"
+        },
+        {
+          "source_path": "statistica/hist/PRSV11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PRSV11.csv",
+          "size": 1202,
+          "sha256": "56a506f558f2db138585350469b0db7e90b645f9b643f4cfbef87484c769b4c1"
+        },
+        {
+          "source_path": "statistica/hist/PVBI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/PVBI11.csv",
+          "size": 603,
+          "sha256": "a45cf4d866211f5874b832b74470755c7bdeb58248c374f340eab1739b96a8e0"
+        },
+        {
+          "source_path": "statistica/hist/QAGR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/QAGR11.csv",
+          "size": 872,
+          "sha256": "29641f35689059642a1411dc5d9317787de5f5b7e6bc6b84d5334aadb9dbde62"
+        },
+        {
+          "source_path": "statistica/hist/QAMI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/QAMI11.csv",
+          "size": 406,
+          "sha256": "1aebc74c115b0a6adecbb10d75a3550c1358fed672c0f7bdca6b1c8250599280"
+        },
+        {
+          "source_path": "statistica/hist/QIRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/QIRI11.csv",
+          "size": 407,
+          "sha256": "16e0d795d3108496c978db63a4ce9ea418212c0244d11bddac1862b8668b1d47"
+        },
+        {
+          "source_path": "statistica/hist/RBCO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBCO11.csv",
+          "size": 882,
+          "sha256": "d56f1ba411527978d4cb0113d220a1a33b8280064ae48072a5a833d0758852e1"
+        },
+        {
+          "source_path": "statistica/hist/RBDS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBDS11.csv",
+          "size": 1705,
+          "sha256": "c1406de9df5d31166bdf750c7ca942811fac22c57ea1c65aff16038473555ab7"
+        },
+        {
+          "source_path": "statistica/hist/RBED11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBED11.csv",
+          "size": 1782,
+          "sha256": "0a80b61463aac780a8e033e8fa86771f25e12a9d2e7c5021f86b28f00f22c644"
+        },
+        {
+          "source_path": "statistica/hist/RBFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBFF11.csv",
+          "size": 1707,
+          "sha256": "d8928ee6eb1669efc523056b39820af4944bd4daf2a0f80e39a87038953f612f"
+        },
+        {
+          "source_path": "statistica/hist/RBGS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBGS11.csv",
+          "size": 1593,
+          "sha256": "5645b987ca4c472ecc83f09c03d6095843c835091133d5c71794e7ff5ff2b972"
+        },
+        {
+          "source_path": "statistica/hist/RBHG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBHG11.csv",
+          "size": 821,
+          "sha256": "ef71ec6c6d662ee0d227eac85f4b0179b4f00ab998a13e5e77b151884d8fb02b"
+        },
+        {
+          "source_path": "statistica/hist/RBHY11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBHY11.csv",
+          "size": 428,
+          "sha256": "fe950cd49bfc40bdf8716d89a6adf588202dd41b26d82853820c2edc7ab70ba2"
+        },
+        {
+          "source_path": "statistica/hist/RBIR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBIR11.csv",
+          "size": 47,
+          "sha256": "e4e40feb0f918b19030746569b71620639602b6140ee432ded93665a9d52dc61"
+        },
+        {
+          "source_path": "statistica/hist/RBLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBLG11.csv",
+          "size": 243,
+          "sha256": "308b66c07f8a10a7f36f1d87f6399c4e75fcf5a50aed7d863e299c4aebcef73b"
+        },
+        {
+          "source_path": "statistica/hist/RBRD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRD11.csv",
+          "size": 1914,
+          "sha256": "ca965ce3a12752f84da9927a2840b268587685d086fb5cd8edb0651f6f70f065"
+        },
+        {
+          "source_path": "statistica/hist/RBRF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRF11.csv",
+          "size": 1560,
+          "sha256": "55b3e9e11ffb3d0e0fc3bbe900d03e625f066f8bd21dee4a38100a75d69d77b8"
+        },
+        {
+          "source_path": "statistica/hist/RBRL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRL11.csv",
+          "size": 699,
+          "sha256": "5cae1f3e169b5989159e71e97dec9fe7afe762cef10651513d12eb98e81aece1"
+        },
+        {
+          "source_path": "statistica/hist/RBRP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRP11.csv",
+          "size": 859,
+          "sha256": "8a5a8199187695ca14a76d1e880addbabd1a8ce5b882d52d759624a82c7af040"
+        },
+        {
+          "source_path": "statistica/hist/RBRR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRR11.csv",
+          "size": 1353,
+          "sha256": "dfee0f863e5c0057000fc4d34bff2cf36b31cb81d5ef7d1251b4b84dedf556c8"
+        },
+        {
+          "source_path": "statistica/hist/RBRS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRS11.csv",
+          "size": 496,
+          "sha256": "4dcc0ad11459c3de02394de08a78a9f026c7795e9e9da0e6de6a4cd7e9a35ddd"
+        },
+        {
+          "source_path": "statistica/hist/RBRY11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBRY11.csv",
+          "size": 977,
+          "sha256": "e53fe3439d7e99b36fae7e709b08d45a4d8e110810342c1d5c395159d0c91858"
+        },
+        {
+          "source_path": "statistica/hist/RBVA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBVA11.csv",
+          "size": 1795,
+          "sha256": "04ec85694ef0f24ac1530d32290af8091ef2df3c1304561a65229fb64406966c"
+        },
+        {
+          "source_path": "statistica/hist/RBVO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RBVO11.csv",
+          "size": 1888,
+          "sha256": "97ed1a1a72fef8ae2e7e68e609266dfcea7140e122b7c28c8f1063b72c01a79d"
+        },
+        {
+          "source_path": "statistica/hist/RCRB11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RCRB11.csv",
+          "size": 1747,
+          "sha256": "0172e4c7421744a924998f6cd8c7861b218c8d9d6bdb4837b97a370263847ab6"
+        },
+        {
+          "source_path": "statistica/hist/RDPD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RDPD11.csv",
+          "size": 1189,
+          "sha256": "ee15414cfb00debb1829608ec3f63e64114b579eadaf812526fa862e8dead36d"
+        },
+        {
+          "source_path": "statistica/hist/RECR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RECR11.csv",
+          "size": 1573,
+          "sha256": "ce178af99ade05f808c8de10b2d5b29dc9dccccd1f1b5fe9778d3560bd1eae00"
+        },
+        {
+          "source_path": "statistica/hist/RECT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RECT11.csv",
+          "size": 1003,
+          "sha256": "17dc2a4e18089898909087f2899354998978b1f922c06eaaf937f6b457b05ac0"
+        },
+        {
+          "source_path": "statistica/hist/RECX11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RECX11.csv",
+          "size": 394,
+          "sha256": "cff080009da30c3898cc172ad3b614fe08b7d140058bd5aafead846ad24cd55a"
+        },
+        {
+          "source_path": "statistica/hist/RELG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RELG11.csv",
+          "size": 510,
+          "sha256": "8e7336ea1b25036bef3b0388c104459ea456127776a1098111dab4da928affa0"
+        },
+        {
+          "source_path": "statistica/hist/RFOF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RFOF11.csv",
+          "size": 733,
+          "sha256": "733c9187c4e05e7dbe0b811c01f58a677bdb3197279a93b16ffb19a503529c9e"
+        },
+        {
+          "source_path": "statistica/hist/RMAI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RMAI11.csv",
+          "size": 310,
+          "sha256": "4db882b36d3cf7b45976e5110718d119172da12fc054b88990ed2c0663a392da"
+        },
+        {
+          "source_path": "statistica/hist/RNDP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RNDP11.csv",
+          "size": 1616,
+          "sha256": "085b4fc490d598202a0a2b832f96b866a5e45b4a784d1f8c9ab68cabeb31ea3c"
+        },
+        {
+          "source_path": "statistica/hist/RNGO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RNGO11.csv",
+          "size": 1787,
+          "sha256": "66a0ad2cd0033cb0bd2b642a189e407c41f8d0de211f4da28d30be42b2adf95b"
+        },
+        {
+          "source_path": "statistica/hist/RRCI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RRCI11.csv",
+          "size": 513,
+          "sha256": "222788a9131bba51e832550431a8dc12882e48c8b7889d92064e00701a0a87cd"
+        },
+        {
+          "source_path": "statistica/hist/RVBI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RVBI11.csv",
+          "size": 755,
+          "sha256": "3f5eb9ba39889e0a66765ab60071d29881f436e7d0fef40d9c871719fba4a3c0"
+        },
+        {
+          "source_path": "statistica/hist/RZAG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RZAG11.csv",
+          "size": 3818,
+          "sha256": "26b9f31e4add58bb727a7739ce90811a3176ceff86d560486418a52e0f40d6ed"
+        },
+        {
+          "source_path": "statistica/hist/RZAK11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RZAK11.csv",
+          "size": 451,
+          "sha256": "dc5700bccbe8666457e4a90c01f98e7c0ae1594344f7793d126079fd2624c1f6"
+        },
+        {
+          "source_path": "statistica/hist/RZTR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/RZTR11.csv",
+          "size": 566,
+          "sha256": "9640557c68d8fb41f0abbc43a1077798858657d58e6a7c50e92d4147a51020c7"
+        },
+        {
+          "source_path": "statistica/hist/SADI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SADI11.csv",
+          "size": 948,
+          "sha256": "4c4399d6c6fd9c80e0a2bb6ce4c667b075d0ac5863be65c7d83388862e676cfe"
+        },
+        {
+          "source_path": "statistica/hist/SARE11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SARE11.csv",
+          "size": 861,
+          "sha256": "248cb18cd6d2c71ad991aecfc9766351622f0d334db63636e0076271c7bf0efa"
+        },
+        {
+          "source_path": "statistica/hist/SCPF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SCPF11.csv",
+          "size": 1692,
+          "sha256": "1dab32065c8577d8ba45834bcca9eeadb6d8761f2d8f03fe3ad86ef304a80fa5"
+        },
+        {
+          "source_path": "statistica/hist/SDIL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SDIL11.csv",
+          "size": 1822,
+          "sha256": "4e5220fc25544eed485478d580876698e3753aec3a04a5c0326731802767903e"
+        },
+        {
+          "source_path": "statistica/hist/SEQR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SEQR11.csv",
+          "size": 499,
+          "sha256": "805d15c3d513e1097d000daf54babd8bf745544a3a05bab0a73a77b45fa8088b"
+        },
+        {
+          "source_path": "statistica/hist/SHPH11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SHPH11.csv",
+          "size": 1639,
+          "sha256": "014ca2c25b906aceb886179385e5d789b3b169b7b6787ddc80483187ef2fa418"
+        },
+        {
+          "source_path": "statistica/hist/SNCI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SNCI11.csv",
+          "size": 265,
+          "sha256": "6bd4ac56e78fd75f15b363b4e1e83810c333259cc9309e33a3176c960cdb6ff6"
+        },
+        {
+          "source_path": "statistica/hist/SNFF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SNFF11.csv",
+          "size": 359,
+          "sha256": "7978c499fac2c2b7ceff7ac04745f64130826ed7c49bf54f70e63d81a5b0c46c"
+        },
+        {
+          "source_path": "statistica/hist/SPTW11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SPTW11.csv",
+          "size": 2222,
+          "sha256": "c36120c3abca2f127b8ba9cd567cef0ea80977727016e972bc9584f0f486c114"
+        },
+        {
+          "source_path": "statistica/hist/SPVJ11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SPVJ11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/SRVD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/SRVD11.csv",
+          "size": 69,
+          "sha256": "152fcfa4bceb7e6b93a4c263d317de46c41f33ba39db8459ab84066dc698d010"
+        },
+        {
+          "source_path": "statistica/hist/STRX11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/STRX11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/TEPP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/TEPP11.csv",
+          "size": 848,
+          "sha256": "23ca3e9125b912410bd101f1c923f2b7d4ae7e4e47e8809ff1413bc5f13dea13"
+        },
+        {
+          "source_path": "statistica/hist/TGAR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/TGAR11.csv",
+          "size": 1287,
+          "sha256": "10202b6f1aec634c2e23f2603b6adf6dae10a4686147527e43427b033115256d"
+        },
+        {
+          "source_path": "statistica/hist/TORD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/TORD11.csv",
+          "size": 728,
+          "sha256": "a1747b772ecea44f10ca611940a24dd995dea1e5393ec7bb2243e0d28d54cca4"
+        },
+        {
+          "source_path": "statistica/hist/TRNT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/TRNT11.csv",
+          "size": 1848,
+          "sha256": "1ea0509115b05c220901c6cf870c1264dbf54257bcb8a017a6fb376381d1d19b"
+        },
+        {
+          "source_path": "statistica/hist/TRXF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/TRXF11.csv",
+          "size": 778,
+          "sha256": "66f847518b96a177e201802d01ccab3904c8bbfcdaac7862def67ce4cceb8181"
+        },
+        {
+          "source_path": "statistica/hist/URPR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/URPR11.csv",
+          "size": 634,
+          "sha256": "1ba5a7f919afb07b52a39ae374202e2ef506bedde0c3df93b7760d26afe1f121"
+        },
+        {
+          "source_path": "statistica/hist/VCJR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VCJR11.csv",
+          "size": 802,
+          "sha256": "8c3f2d98d99e31315551f7365e86916ad9a004937fa779cc53cae9727251e716"
+        },
+        {
+          "source_path": "statistica/hist/VCRI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VCRI11.csv",
+          "size": 70,
+          "sha256": "c33a16940fa2666dcaba841d64a9c34bdcb006e3090fb9889ee84c9d364a222a"
+        },
+        {
+          "source_path": "statistica/hist/VCRR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VCRR11.csv",
+          "size": 358,
+          "sha256": "5fd74c04659119df8c0d0f0db08f4c410bf5224e390760e5602f43de4c5d221c"
+        },
+        {
+          "source_path": "statistica/hist/VGHF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VGHF11.csv",
+          "size": 445,
+          "sha256": "76e328a1300156f5e462d41afa42213e052f4c4d862bfac7388f93028b5b7527"
+        },
+        {
+          "source_path": "statistica/hist/VGIA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VGIA11.csv",
+          "size": 3704,
+          "sha256": "a9aad08e1aaa84468fd4106a00b2da1b02eaae420956194050535ec1550d4c0c"
+        },
+        {
+          "source_path": "statistica/hist/VGIP11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VGIP11.csv",
+          "size": 738,
+          "sha256": "dd0a7a985788982c0eb12c2f6ac947373d6d392ee693dd3885031d6d5e62af26"
+        },
+        {
+          "source_path": "statistica/hist/VGIR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VGIR11.csv",
+          "size": 1250,
+          "sha256": "b7ccc67983ce81f0bd0bc3ff622473b187dde0844004c41bd4a77afe5bb37610"
+        },
+        {
+          "source_path": "statistica/hist/VIFI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VIFI11.csv",
+          "size": 670,
+          "sha256": "3127e91fec23d96bf70445165d515db9141eba2a1ff0a81c7bfeff348197daa4"
+        },
+        {
+          "source_path": "statistica/hist/VILG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VILG11.csv",
+          "size": 1011,
+          "sha256": "7dcc1e74ebda8004a5a9cc9a23cf3ac9717903b41208e680e446a15ff55cb104"
+        },
+        {
+          "source_path": "statistica/hist/VINO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VINO11.csv",
+          "size": 806,
+          "sha256": "e6683d845405005158e5f95ad29cb9098ac1d457b653a966fb6b3664e063e7bd"
+        },
+        {
+          "source_path": "statistica/hist/VISC11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VISC11.csv",
+          "size": 1468,
+          "sha256": "4a82e8143e43c122a44ed6e7e18576db96bfec879e10d784bc2833e97c8c05b6"
+        },
+        {
+          "source_path": "statistica/hist/VIUR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VIUR11.csv",
+          "size": 368,
+          "sha256": "c15ef740f3216738a76841a75b4d911304865a4aee6113f614ffb18dec50aae9"
+        },
+        {
+          "source_path": "statistica/hist/VJFD11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VJFD11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/VLOL11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VLOL11.csv",
+          "size": 2078,
+          "sha256": "4394315f6ed759ff6a289b891aa106534b863a3109bf2406387f385e204986a5"
+        },
+        {
+          "source_path": "statistica/hist/VOTS11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VOTS11.csv",
+          "size": 1027,
+          "sha256": "2799a127c3f757162372873131a4c07a06903ee2835134781edb56f56634b043"
+        },
+        {
+          "source_path": "statistica/hist/VRTA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VRTA11.csv",
+          "size": 1865,
+          "sha256": "b07e5aa78900dbb85cf72cfb275db52af8a14884474ecd8e67f318883df749f4"
+        },
+        {
+          "source_path": "statistica/hist/VSHO11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VSHO11.csv",
+          "size": 887,
+          "sha256": "a02f423971fc3f3924aaab5cf22648dcab485234bb66769ae7ffd7dc1b861427"
+        },
+        {
+          "source_path": "statistica/hist/VSLH11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VSLH11.csv",
+          "size": 432,
+          "sha256": "11c8e6de9a9fbc7b83867674ae4277b944ccbcb7253103898aecd0aacebc2f30"
+        },
+        {
+          "source_path": "statistica/hist/VTLT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VTLT11.csv",
+          "size": 1150,
+          "sha256": "6581cf544c1a902d89eaa56e8fc3d204de8b1d90044fd69c87dc6c3da9af0ad6"
+        },
+        {
+          "source_path": "statistica/hist/VVPR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VVPR11.csv",
+          "size": 931,
+          "sha256": "f7b3f4cb3605e913d99ba088bc1edbb5769f9d3e0655bbffbe11ed6620e32331"
+        },
+        {
+          "source_path": "statistica/hist/VXXV11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/VXXV11.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/hist/WPLZ11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/WPLZ11.csv",
+          "size": 1439,
+          "sha256": "4302b01b987f00fca12d8e54682fb00a245369abd80838a21147e33be317ad57"
+        },
+        {
+          "source_path": "statistica/hist/WTSP11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/WTSP11B.csv",
+          "size": 720,
+          "sha256": "ff2dc4f1e5a69edc8ec402539f49e66f55167aa73c9754ff898c89ddc61bc4d1"
+        },
+        {
+          "source_path": "statistica/hist/XPCA11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPCA11.csv",
+          "size": 3823,
+          "sha256": "ebd51a6a0f4862498bb4cb70ad092be0c35cc40c3aa441d818b9fe7ce75b2408"
+        },
+        {
+          "source_path": "statistica/hist/XPCI11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPCI11.csv",
+          "size": 801,
+          "sha256": "e6c640dcb4e8dc2069e50bebb16d04753690d7a2a834e307b76fccf4897e67c1"
+        },
+        {
+          "source_path": "statistica/hist/XPCM11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPCM11.csv",
+          "size": 1755,
+          "sha256": "60bf1683e506ac1653a51c1ddd3e3215d4990c34b7c9f910e37edec801ff7201"
+        },
+        {
+          "source_path": "statistica/hist/XPHT11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPHT11.csv",
+          "size": 465,
+          "sha256": "684a9d8c9ad02b6eca3f38e33ada576856dfbf576165384addac69c0d18d030d"
+        },
+        {
+          "source_path": "statistica/hist/XPIN11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPIN11.csv",
+          "size": 1171,
+          "sha256": "2a93787431f4a8c72c1522a9a725a0c4d5244a44c63b6cfb70cd7ca75755dca9"
+        },
+        {
+          "source_path": "statistica/hist/XPLG11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPLG11.csv",
+          "size": 1295,
+          "sha256": "3151d6097a45a29919d73a294741f299d403c7e1c7a82bb56d7a51a293f48c29"
+        },
+        {
+          "source_path": "statistica/hist/XPML11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPML11.csv",
+          "size": 1439,
+          "sha256": "1873078c7ad4218e3348b7c020730e0bcb85250bcb97d72224dc4f59a779ba01"
+        },
+        {
+          "source_path": "statistica/hist/XPPR11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPPR11.csv",
+          "size": 798,
+          "sha256": "ecb03f6c7d768c1144047c37e1e321bd35bf9a2f2435a633772ad68e4c041bd4"
+        },
+        {
+          "source_path": "statistica/hist/XPSF11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XPSF11.csv",
+          "size": 766,
+          "sha256": "a6dc8c2dc63223f10edcf89021791eb048116db632eec1e5ffd5f92354d6cd24"
+        },
+        {
+          "source_path": "statistica/hist/XTED11.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/XTED11.csv",
+          "size": 48,
+          "sha256": "cded41a9786729ac86f9f17ae328989c74b1f38a71f33c319698db110bf3be50"
+        },
+        {
+          "source_path": "statistica/hist/YUFI11B.csv",
+          "archive_path": "legacy_sources/cotacaopython/statistica/hist/YUFI11B.csv",
+          "size": 24,
+          "sha256": "c2baa7cef13571efb0dc08fe6e1e0c12d4c9873ba7bc383c4e4d1a88e89adb79"
+        },
+        {
+          "source_path": "statistica/regressao_grafica02.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/regressao_grafica02.py",
+          "size": 286,
+          "sha256": "f738c6d9697157fc7f0e059f0bcd82849d748832b71bb861f5a38098b30c453a"
+        },
+        {
+          "source_path": "statistica/regressao_grafica03.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/regressao_grafica03.py",
+          "size": 478,
+          "sha256": "bfca98524974c986a9436a41501f717faa2fbd2b2725267f1a52fdde86bc78a2"
+        },
+        {
+          "source_path": "statistica/regressao_grafico01.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/regressao_grafico01.py",
+          "size": 673,
+          "sha256": "b12e7a9d6bb25e2380616030d26b3e7b4a80f4aeaa59c6cd8caaefcd51c261d4"
+        },
+        {
+          "source_path": "statistica/regressao_historico01.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/regressao_historico01.py",
+          "size": 2674,
+          "sha256": "bfd8d79eeae93d8cd921e1d06be067d7537688737e3a00b7672a5596ca452080"
+        },
+        {
+          "source_path": "statistica/regressao_historico02.py",
+          "archive_path": "legacy_sources/cotacaopython/statistica/regressao_historico02.py",
+          "size": 669,
+          "sha256": "55158162368f70139a9ea95b3f4c94a7f45af5ea5dd53a50c4889c3b9c1fe0be"
+        },
+        {
+          "source_path": "util/populate/cadastrar_cotacoes.py",
+          "archive_path": "legacy_sources/cotacaopython/util/populate/cadastrar_cotacoes.py",
+          "size": 1270,
+          "sha256": "1071df0ff282c141e6d84ddfa17779241e3a8788696fe71cf29d82c213a405de"
+        },
+        {
+          "source_path": "util/populate/create_table.sql",
+          "archive_path": "legacy_sources/cotacaopython/util/populate/create_table.sql",
+          "size": 2259,
+          "sha256": "e6e35d2040f1721b3c5417a9f4e961c9cdd500672434d8bad69c3b4a255694aa"
+        },
+        {
+          "source_path": "util/populate/inserir_dados.py",
+          "archive_path": "legacy_sources/cotacaopython/util/populate/inserir_dados.py",
+          "size": 2936,
+          "sha256": "ae163a8ef10d2abfdd16f13689f4104ee36e7b557886c97e7d9ff3f39dc17093"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.name",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/cotacaopython.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/csv-plugin.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/dataSources.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/Project_Default.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/other.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/sqldialects.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".ipynb_checkpoints/cluster02-checkpoint.ipynb",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/calculadora.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/calculadora_cotacao.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/datamine.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/historico.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/main.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/base.pbix",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/carteira.pbix",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/dataframe_cotacao.csv~",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/indicadores.pbix",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/minha_carteira.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/minha_carteira.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "bi/~$minha_carteira.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "chromedriver105/chromedriver.exe",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "info/b3",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "util/conn/__pycache__/conexao.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "util/conn/__pycache__/settings.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "util/conn/conexao.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "util/conn/settings.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "util/populate/__pycache__/inserir_dados.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "analise_fundamental",
+      "url": "https://github.com/0rakul0/analise_fundamental",
+      "branch": "main",
+      "source_commit": "0836255d0baa1c66c6cece18b430c89ce9ef5e19",
+      "archive_files": 10,
+      "archive_bytes": 254544,
+      "included": [
+        {
+          "source_path": ".gitattributes",
+          "archive_path": "legacy_sources/analise_fundamental/.gitattributes",
+          "size": 66,
+          "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+        },
+        {
+          "source_path": "Extrator.py",
+          "archive_path": "legacy_sources/analise_fundamental/Extrator.py",
+          "size": 916,
+          "sha256": "3a4f2b076d90c1d9e8b96adc3742a42b521bc109b57a07923974904b5a040569"
+        },
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/analise_fundamental/README.md",
+          "size": 1031,
+          "sha256": "ce0e1b1a9d94ebab8729a0265d89ff52397c447548fabfd454c13a4a55c01411"
+        },
+        {
+          "source_path": "analiseApi.py",
+          "archive_path": "legacy_sources/analise_fundamental/analiseApi.py",
+          "size": 636,
+          "sha256": "8e0fb72496dce49aa2db4588cb236e32abc19481decbe0040c465d276362cb22"
+        },
+        {
+          "source_path": "analise_fundamental01.py",
+          "archive_path": "legacy_sources/analise_fundamental/analise_fundamental01.py",
+          "size": 1950,
+          "sha256": "1a61ff51b14a9570eb8e534be3aeda648b9063880d4a61f7b5ba05915eab2413"
+        },
+        {
+          "source_path": "dashBoard_csv.py",
+          "archive_path": "legacy_sources/analise_fundamental/dashBoard_csv.py",
+          "size": 1319,
+          "sha256": "594d667247461eebb544a1ebed86ac2a67ddbdc95a54c899fd7c603b6542009d"
+        },
+        {
+          "source_path": "monte_carlo.ipynb",
+          "archive_path": "legacy_sources/analise_fundamental/monte_carlo.ipynb",
+          "size": 175252,
+          "sha256": "45df2ee06c0b1570e87248bb62015eac1046a0d5d6cd84e6e3755892ee4ad45f"
+        },
+        {
+          "source_path": "python_mercado_01.ipynb",
+          "archive_path": "legacy_sources/analise_fundamental/python_mercado_01.ipynb",
+          "size": 68426,
+          "sha256": "a8fb15d84be2be94dc3c8135cb7e5236aec6b919be463c004d395b4c930dd6b8"
+        },
+        {
+          "source_path": "statistica.py",
+          "archive_path": "legacy_sources/analise_fundamental/statistica.py",
+          "size": 411,
+          "sha256": "e820e182ba34caefc60212fbb47e75d5011a4c900cb0507950147e8f6f9f0e33"
+        },
+        {
+          "source_path": "util/StringTransform.py",
+          "archive_path": "legacy_sources/analise_fundamental/util/StringTransform.py",
+          "size": 4537,
+          "sha256": "a97fd4a9b527dd13aac6cf144bdfa2f5cfdfc106784d2b40d3c5fc5b9fda80f0"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/analise_fundamental.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/Project_Default.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "BI/dash_powerbi.pbix",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "__pycache__/analiseApi.cpython-39.pyc",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "conexao/sql/diagrama_bolsa.erd",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "conexao/sql/diagrama_bolsa.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "temp-plot.html",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "Projeto_ciencia_de_dados_acoes",
+      "url": "https://github.com/0rakul0/Projeto_ciencia_de_dados_acoes",
+      "branch": "main",
+      "source_commit": "57b5ceb3784a8512044bfe134a5a0af46ef606dd",
+      "archive_files": 85,
+      "archive_bytes": 12479418,
+      "included": [
+        {
+          "source_path": "LICENSE",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/LICENSE",
+          "size": 1068,
+          "sha256": "3eb4f347d76726adab85ec2c98710e08ebe84b006f81a31520039548ce7e04a1"
+        },
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/README.md",
+          "size": 82,
+          "sha256": "443f458675df69b467f999be0766d8eff173012df42291e8e0bfb0b43658537d"
+        },
+        {
+          "source_path": "carteira_de_acoes.ipynb",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/carteira_de_acoes.ipynb",
+          "size": 4538,
+          "sha256": "b9b3076a403210824686ed804b1554f792990e152e2ed2c636407f3c74cf38d9"
+        },
+        {
+          "source_path": "data/Cotacoes.xlsx",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/Cotacoes.xlsx",
+          "size": 7647640,
+          "sha256": "546f5808e1ad98c5c2f6d2a33f9141288c97aaf3b553756d35d80f48a26e8310"
+        },
+        {
+          "source_path": "data/balancos/balanco_ABEV3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ABEV3.xls",
+          "size": 52224,
+          "sha256": "2891f22be4d1668a40a68d8bf4119a77f85b69a4128a1c9968c0291f5c84f880"
+        },
+        {
+          "source_path": "data/balancos/balanco_ASAI3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ASAI3.xls",
+          "size": 14207,
+          "sha256": "2443d87ef248d7de67745f3f2045b92645d45bb19d829c9122d1bd4a17b30959"
+        },
+        {
+          "source_path": "data/balancos/balanco_AZUL4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_AZUL4.xls",
+          "size": 30309,
+          "sha256": "479c4faeae63bae4f693d4aa29b02e543b18a89526bfa0bf595510de72d8332d"
+        },
+        {
+          "source_path": "data/balancos/balanco_B3SA3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_B3SA3.xls",
+          "size": 64274,
+          "sha256": "8f6a8ef86afa369d650a1200eacb23a66d6b8d3da5d751e6f1d9c6cfbbc02869"
+        },
+        {
+          "source_path": "data/balancos/balanco_BBAS3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BBAS3.xls",
+          "size": 68412,
+          "sha256": "b26239dc23686bf5e2390589011427682f00875bee97feef4477d396f877b037"
+        },
+        {
+          "source_path": "data/balancos/balanco_BBDC3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BBDC3.xls",
+          "size": 68284,
+          "sha256": "56f1e653b6c75413325b6faad6739c8bea8b9fa3a4957a870aa5b69727d5ef4f"
+        },
+        {
+          "source_path": "data/balancos/balanco_BBDC4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BBDC4.xls",
+          "size": 68284,
+          "sha256": "56f1e653b6c75413325b6faad6739c8bea8b9fa3a4957a870aa5b69727d5ef4f"
+        },
+        {
+          "source_path": "data/balancos/balanco_BBSE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BBSE3.xls",
+          "size": 16355,
+          "sha256": "a70b1df77959472e080b5e44a78fb117a1ff8565c6cae502421077ad22cf59a0"
+        },
+        {
+          "source_path": "data/balancos/balanco_BEEF3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BEEF3.xls",
+          "size": 64284,
+          "sha256": "f98382312665698fc8d0dfb173950f4715a35728e50749d313bd6cfcec1ce657"
+        },
+        {
+          "source_path": "data/balancos/balanco_BPAC11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BPAC11.xls",
+          "size": 66667,
+          "sha256": "30b929d37bb7067efcceb5aa5f5e1088ce8854c137035b915f628abb43e3e6dc"
+        },
+        {
+          "source_path": "data/balancos/balanco_BRAP4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BRAP4.xls",
+          "size": 64404,
+          "sha256": "198c149790f921f7e9bc322471753e9f947cd7ecb542d3e7aaa607496d46960e"
+        },
+        {
+          "source_path": "data/balancos/balanco_BRDT3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BRDT3.xls",
+          "size": 30325,
+          "sha256": "8abda24566149449a0a5651331e5835bb09e5db4ef1e8c9cedc5b620795a8b04"
+        },
+        {
+          "source_path": "data/balancos/balanco_BRFS3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BRFS3.xls",
+          "size": 64288,
+          "sha256": "09573983d2fc983f40b2f29f9fdd293df784b98954f422afc516fcaf8b849ae2"
+        },
+        {
+          "source_path": "data/balancos/balanco_BRKM5.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BRKM5.xls",
+          "size": 64284,
+          "sha256": "99999551e9c1113d22c4f5d82d51b1f51c71044bf0cfca8a77ed500d225959e3"
+        },
+        {
+          "source_path": "data/balancos/balanco_BRML3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BRML3.xls",
+          "size": 64322,
+          "sha256": "54fc7cdfeaf41ec60cc30b8459ca42975b9e6e12bf368481d6ca817dfa9e4b4f"
+        },
+        {
+          "source_path": "data/balancos/balanco_BTOW3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_BTOW3.xls",
+          "size": 64334,
+          "sha256": "b86741c6742412690d568a6f31e3d60fbc6248a0f73d1380db8f3085664a781c"
+        },
+        {
+          "source_path": "data/balancos/balanco_CCRO3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CCRO3.xls",
+          "size": 64340,
+          "sha256": "e3e7462a7ba912323ad58351cfa613b29e4923bf4bf24e60b6dcfa60c1dbb209"
+        },
+        {
+          "source_path": "data/balancos/balanco_CIEL3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CIEL3.xls",
+          "size": 64136,
+          "sha256": "f61566db91f2afd79623dedf94273d031018f1b8b649e29b0eba07bcb43701cb"
+        },
+        {
+          "source_path": "data/balancos/balanco_CMIG4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CMIG4.xls",
+          "size": 64388,
+          "sha256": "b5fb1a2d8e8105d7c2aae3cdc2599473d06191e1273e5aa08b5f3845a36779b4"
+        },
+        {
+          "source_path": "data/balancos/balanco_COGN3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_COGN3.xls",
+          "size": 64388,
+          "sha256": "c2d6c18ffcbeae2086b779c8ef48b2ae228ec69b462aaf3a138f68ebc82fa300"
+        },
+        {
+          "source_path": "data/balancos/balanco_CPFE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CPFE3.xls",
+          "size": 64412,
+          "sha256": "d1f300c89916bfdc58708227765e3512795889101ad09b0d2aa5b263f4fb44a9"
+        },
+        {
+          "source_path": "data/balancos/balanco_CPLE6.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CPLE6.xls",
+          "size": 64280,
+          "sha256": "61fc62845bd9491bdb96a52ff97062347ddd3c639ade714929fe75df693f011b"
+        },
+        {
+          "source_path": "data/balancos/balanco_CRFB3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CRFB3.xls",
+          "size": 30325,
+          "sha256": "995da9f0b31c439e3483699079f7dceb150782bbc1001051105d2ccb482fb6cf"
+        },
+        {
+          "source_path": "data/balancos/balanco_CSAN3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CSAN3.xls",
+          "size": 64107,
+          "sha256": "5bc0e544ed76f3ad6759894bbf1a0e36ce60a8fd17f60e928c2b1dbf257550b1"
+        },
+        {
+          "source_path": "data/balancos/balanco_CSNA3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CSNA3.xls",
+          "size": 64276,
+          "sha256": "eb2277dbb57be6337fc88c224f9df0110b0fb38ecbd07037041b3e45f7eae325"
+        },
+        {
+          "source_path": "data/balancos/balanco_CVCB3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CVCB3.xls",
+          "size": 50451,
+          "sha256": "8d743df387eb9a078073d5623b7466b5982d83b2b47c7c5bf4fead575f6677e9"
+        },
+        {
+          "source_path": "data/balancos/balanco_CYRE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_CYRE3.xls",
+          "size": 64310,
+          "sha256": "51b6e21dd570949843e63282a49e4163677101f0455f0902a07081a407548c39"
+        },
+        {
+          "source_path": "data/balancos/balanco_ECOR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ECOR3.xls",
+          "size": 64292,
+          "sha256": "1c86864001edef7162199507d383fcdfc02dfaaa2fc58c5364fd8cd23285a2bc"
+        },
+        {
+          "source_path": "data/balancos/balanco_EGIE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_EGIE3.xls",
+          "size": 64296,
+          "sha256": "9fb976fbc4d0a29dae3248d08ab58b11a9b1f30a2620b517930abd3aba4faa17"
+        },
+        {
+          "source_path": "data/balancos/balanco_ELET3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ELET3.xls",
+          "size": 64398,
+          "sha256": "362b63b828f4931df92ff7cf3e2cfb3debbba85b555fa8f3678c6140214732cf"
+        },
+        {
+          "source_path": "data/balancos/balanco_ELET6.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ELET6.xls",
+          "size": 64398,
+          "sha256": "362b63b828f4931df92ff7cf3e2cfb3debbba85b555fa8f3678c6140214732cf"
+        },
+        {
+          "source_path": "data/balancos/balanco_EMBR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_EMBR3.xls",
+          "size": 64284,
+          "sha256": "0cbcf8bcefcbfe45cf941d1a057f4787fa9b7f9be101ac387e3b126a883d8b25"
+        },
+        {
+          "source_path": "data/balancos/balanco_ENBR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ENBR3.xls",
+          "size": 64322,
+          "sha256": "4ed0e34ba4fe0de23db0f63828e0c2cb75f057472c63db1cc84c24db79a24f6a"
+        },
+        {
+          "source_path": "data/balancos/balanco_ENEV3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ENEV3.xls",
+          "size": 64280,
+          "sha256": "82485e39f2407f6736b59d7658f891bfa8bf15bc6b80edf8c8a7914d2df3c53c"
+        },
+        {
+          "source_path": "data/balancos/balanco_ENGI11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ENGI11.xls",
+          "size": 64286,
+          "sha256": "841731786d9097507e1768d813d14b1632af6eaa1f0d1500fc2b2933faedc205"
+        },
+        {
+          "source_path": "data/balancos/balanco_EQTL3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_EQTL3.xls",
+          "size": 64424,
+          "sha256": "6ab86836749691046ecc1c3c88037a0079faefdae6868a81e5173e6ecbf93d1a"
+        },
+        {
+          "source_path": "data/balancos/balanco_EZTC3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_EZTC3.xls",
+          "size": 64280,
+          "sha256": "62caa4b5563001b42b8eb8fa9eb2ebd15133ee92fb97b370354688a56562eada"
+        },
+        {
+          "source_path": "data/balancos/balanco_FLRY3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_FLRY3.xls",
+          "size": 64282,
+          "sha256": "c8881cc6f94ddc35d539d6ee145c1e424da1ee8c9023d22e1642b2b0bdc9464f"
+        },
+        {
+          "source_path": "data/balancos/balanco_GGBR4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_GGBR4.xls",
+          "size": 64256,
+          "sha256": "9248980ad2406053ac379d7c8bd7517f829c49f2dafb9443956998201e8ec71e"
+        },
+        {
+          "source_path": "data/balancos/balanco_GNDI3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_GNDI3.xls",
+          "size": 24955,
+          "sha256": "3a99cde372df9f258647aeb0dbdd1dcb6096d7e3fa7a86b2dbec2d0d40fce3dc"
+        },
+        {
+          "source_path": "data/balancos/balanco_GOAU4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_GOAU4.xls",
+          "size": 64270,
+          "sha256": "e73b53d4a100328d908d4b4cafddbac05e610203752ad65b59333ef6c949de63"
+        },
+        {
+          "source_path": "data/balancos/balanco_GOLL4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_GOLL4.xls",
+          "size": 64336,
+          "sha256": "dc01a6e426c053946709bf94ec992ab53eca748b01237e0badc9edca8905fe07"
+        },
+        {
+          "source_path": "data/balancos/balanco_HAPV3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_HAPV3.xls",
+          "size": 24947,
+          "sha256": "591d45b9ef509883a31f5b94b7b4012bc3b9a0f8bb9596e6de2cb2dd3224de7c"
+        },
+        {
+          "source_path": "data/balancos/balanco_HGTX3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_HGTX3.xls",
+          "size": 64290,
+          "sha256": "c75a7b6f9a08c4bba6a11a4e63aa7d161a5fe6314cc983f5890f32e73704efd0"
+        },
+        {
+          "source_path": "data/balancos/balanco_HYPE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_HYPE3.xls",
+          "size": 64282,
+          "sha256": "9bf42ffaf32f7ee4b6e1389ca4c2fcd40aceafc50a581aacdb8478766a9ef96b"
+        },
+        {
+          "source_path": "data/balancos/balanco_IGTA3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_IGTA3.xls",
+          "size": 64286,
+          "sha256": "ae02087c54af90b4206c0a0ad424e0a5c4b284d3ba8b7eeecfc7a26f9a6803f3"
+        },
+        {
+          "source_path": "data/balancos/balanco_ITSA4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ITSA4.xls",
+          "size": 64282,
+          "sha256": "2b2fd38e0c39a278824ae27979dd81355d3838b3ba4491b4adf735570757d2af"
+        },
+        {
+          "source_path": "data/balancos/balanco_ITUB4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_ITUB4.xls",
+          "size": 68522,
+          "sha256": "1b118b1943333b41421fd0dfb0362ba79bc875266b8a5e5045fa26fafb8d3576"
+        },
+        {
+          "source_path": "data/balancos/balanco_JBSS3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_JBSS3.xls",
+          "size": 64330,
+          "sha256": "301dee87afcc084f8129af0b79888a4904450be0e96b472c6495c4f7220eb9bc"
+        },
+        {
+          "source_path": "data/balancos/balanco_JHSF3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_JHSF3.xls",
+          "size": 64288,
+          "sha256": "a9f262f711886437142c2e08f8cd7d0cdd23f9120ab279a9f636008d50948139"
+        },
+        {
+          "source_path": "data/balancos/balanco_KLBN11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_KLBN11.xls",
+          "size": 64282,
+          "sha256": "099ca22866bc95950a7b2887395bcfd2d3fa7bb214ba9d77991d51428561d45b"
+        },
+        {
+          "source_path": "data/balancos/balanco_LAME4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_LAME4.xls",
+          "size": 64312,
+          "sha256": "298db2449ff6bd799c887010b53f71b730882692481ff050516ef99b6ec46e65"
+        },
+        {
+          "source_path": "data/balancos/balanco_LCAM3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_LCAM3.xls",
+          "size": 62367,
+          "sha256": "7a640d88571ee4c2aabfa0bb9a84bed11ebde086e030305f7fcf1da6fc92d484"
+        },
+        {
+          "source_path": "data/balancos/balanco_LREN3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_LREN3.xls",
+          "size": 64282,
+          "sha256": "d03bd340ca9a5232cd14b5030bcde17026d4d2d8e2d03191488e7a710f7b07c5"
+        },
+        {
+          "source_path": "data/balancos/balanco_MGLU3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_MGLU3.xls",
+          "size": 62531,
+          "sha256": "ba2f48c15c3cb1a087e7259a988ce5a88e6f90e13a7fee6a9c3a72483003ff1f"
+        },
+        {
+          "source_path": "data/balancos/balanco_MRFG3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_MRFG3.xls",
+          "size": 64284,
+          "sha256": "f299725ecc307bd2de203d426bd59a251cb54fa3f2d7459d0e90bd257ad81d4b"
+        },
+        {
+          "source_path": "data/balancos/balanco_MRVE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_MRVE3.xls",
+          "size": 64276,
+          "sha256": "ac8cfcd9ce523722ab68d38755cca166bca5c09e0f8e9c30e562371e02c5b51c"
+        },
+        {
+          "source_path": "data/balancos/balanco_MULT3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_MULT3.xls",
+          "size": 64288,
+          "sha256": "fa5c74ed6ebae415f529f6689f17c5729cd5ab8ccbd106b3cb44840acdcb57b4"
+        },
+        {
+          "source_path": "data/balancos/balanco_NTCO3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_NTCO3.xls",
+          "size": 15892,
+          "sha256": "3f1027dbf0f412a894ff2726deae62179bacdf6bf93b849962c864b4e78908af"
+        },
+        {
+          "source_path": "data/balancos/balanco_PCAR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_PCAR3.xls",
+          "size": 64296,
+          "sha256": "a7a522df69c82576975426903e88580c49521f0fbb7a1f08f912a137dd7c82be"
+        },
+        {
+          "source_path": "data/balancos/balanco_PETR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_PETR3.xls",
+          "size": 64288,
+          "sha256": "8ebeccc5bc3039ec2f49e58fdb33a7cbccb35dc94afd82cb8506e48f9b79d406"
+        },
+        {
+          "source_path": "data/balancos/balanco_PETR4.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_PETR4.xls",
+          "size": 64288,
+          "sha256": "8ebeccc5bc3039ec2f49e58fdb33a7cbccb35dc94afd82cb8506e48f9b79d406"
+        },
+        {
+          "source_path": "data/balancos/balanco_PRIO3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_PRIO3.xls",
+          "size": 64512,
+          "sha256": "27f95bd01024a942c0e1d4d4d0dc87c9204e769aba8b56925632b515f33dbff1"
+        },
+        {
+          "source_path": "data/balancos/balanco_QUAL3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_QUAL3.xls",
+          "size": 61185,
+          "sha256": "e0009734e1e7fce442fb3e73d282938910f0d222c300593ec72625ef177ff6a7"
+        },
+        {
+          "source_path": "data/balancos/balanco_RADL3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_RADL3.xls",
+          "size": 64060,
+          "sha256": "de3f3fec13cbac660bd0d4a5a8232c3d8f13dabdce741fbdfb5712806d03a855"
+        },
+        {
+          "source_path": "data/balancos/balanco_RAIL3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_RAIL3.xls",
+          "size": 64288,
+          "sha256": "eb2bc94db44cd4b1c68d5d26708d20241092c9d0bc65b130a4a69314703bb381"
+        },
+        {
+          "source_path": "data/balancos/balanco_RENT3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_RENT3.xls",
+          "size": 64308,
+          "sha256": "079d1356ede1554db4d794cc15aac08e205cbf6b2bb748da82d601da23286de9"
+        },
+        {
+          "source_path": "data/balancos/balanco_SANB11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_SANB11.xls",
+          "size": 68210,
+          "sha256": "e7e5f2564d6749b35a6e4e928cdb2b88ec0d0a07e4bf446a1a84f3d52323be88"
+        },
+        {
+          "source_path": "data/balancos/balanco_SBSP3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_SBSP3.xls",
+          "size": 63832,
+          "sha256": "0df86ca693e13a71815b62968bb20e15c55e456165953dd8c5b28ca85a1d828e"
+        },
+        {
+          "source_path": "data/balancos/balanco_SULA11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_SULA11.xls",
+          "size": 64512,
+          "sha256": "bad05f438e078e99ab8a09cc8b1fed19978cd0eaef1d2cbe0037a71cef159d62"
+        },
+        {
+          "source_path": "data/balancos/balanco_SUZB3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_SUZB3.xls",
+          "size": 64294,
+          "sha256": "12ce2c34a438c2fafc32536edc8bca70fb8e8d0ac899c892c70f711e0b944fde"
+        },
+        {
+          "source_path": "data/balancos/balanco_TAEE11.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_TAEE11.xls",
+          "size": 64280,
+          "sha256": "9cae1a9e762e2503f5b2e2e8b33ee6b4bd980601d67697e5df03aeb1e0b9456c"
+        },
+        {
+          "source_path": "data/balancos/balanco_TIMS3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_TIMS3.xls",
+          "size": 19427,
+          "sha256": "9ec62b00846b211090fe90714f91bd1d2e10e3a60f30021aebd89e4b30ae7dc4"
+        },
+        {
+          "source_path": "data/balancos/balanco_TOTS3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_TOTS3.xls",
+          "size": 64280,
+          "sha256": "785db954052254f1e51a14fac61f61cd6b0e0cd20c75db2d9feec04e3000d2bb"
+        },
+        {
+          "source_path": "data/balancos/balanco_UGPA3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_UGPA3.xls",
+          "size": 64320,
+          "sha256": "ca025ba1cd9509fce20868419e22d54481eaa0b52241ee6903c0b9ad981c07e0"
+        },
+        {
+          "source_path": "data/balancos/balanco_USIM5.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_USIM5.xls",
+          "size": 64286,
+          "sha256": "b7635a3c835432e2116d38e79eac7fcb65d051314285220bd7ce703360c1ead4"
+        },
+        {
+          "source_path": "data/balancos/balanco_VALE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_VALE3.xls",
+          "size": 64278,
+          "sha256": "bf252e672f917b36f7f8dbebb65248ffbf3093abd54f871842208d747ff8fbd2"
+        },
+        {
+          "source_path": "data/balancos/balanco_VIVT3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_VIVT3.xls",
+          "size": 64294,
+          "sha256": "5cceade86930a14f75ad2ebd2d459789a09767f0aa10d236fefe6bb835814b75"
+        },
+        {
+          "source_path": "data/balancos/balanco_VVAR3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_VVAR3.xls",
+          "size": 64288,
+          "sha256": "b395ac164d1197160d09fe2acaac875be3215dd7342ad6c65637c9e450441d1e"
+        },
+        {
+          "source_path": "data/balancos/balanco_WEGE3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_WEGE3.xls",
+          "size": 64282,
+          "sha256": "e9ef63bf3f55233abb161a773a1703607acfdde1f4405123295d665e60613104"
+        },
+        {
+          "source_path": "data/balancos/balanco_YDUQ3.xls",
+          "archive_path": "legacy_sources/Projeto_ciencia_de_dados_acoes/data/balancos/balanco_YDUQ3.xls",
+          "size": 64512,
+          "sha256": "a7c03cf400038634316c8599ae369c071229bbfd958748ffccae3b8b7968c89d"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".gitattributes",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/Projeto_ciencia_de_dados_acoes.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/workspace.xml",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "cienciaDeDados",
+      "url": "https://github.com/0rakul0/cienciaDeDados",
+      "branch": "main",
+      "source_commit": "ec23846c60a79df45b5a64498d16b5610fa91ee5",
+      "archive_files": 10,
+      "archive_bytes": 26331,
+      "included": [
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/cienciaDeDados/README.md",
+          "size": 1387,
+          "sha256": "258843bec5a40d0d32359246b51c743cc040cb6c4d2e6b79c22f17b82f8856d9"
+        },
+        {
+          "source_path": "dataAnalitycsParte1.py",
+          "archive_path": "legacy_sources/cienciaDeDados/dataAnalitycsParte1.py",
+          "size": 4370,
+          "sha256": "7a8511b307d4df9679aca806d7cd29a87de6a610355c32dbc57f8a31f66103fa"
+        },
+        {
+          "source_path": "dataAnalitycsParte2.py",
+          "archive_path": "legacy_sources/cienciaDeDados/dataAnalitycsParte2.py",
+          "size": 6552,
+          "sha256": "445763d9c5666f723759010321de973f10df165bc9c9553aa931ff4d3afb3fad"
+        },
+        {
+          "source_path": "dataAnalitycsParte3.py",
+          "archive_path": "legacy_sources/cienciaDeDados/dataAnalitycsParte3.py",
+          "size": 3246,
+          "sha256": "f87e96546ed0adf7be4f98bab9d8cd71d8e2eba5e3a718b9c4c4842dc40fcf82"
+        },
+        {
+          "source_path": "dataAnalitycsParte4.py",
+          "archive_path": "legacy_sources/cienciaDeDados/dataAnalitycsParte4.py",
+          "size": 2943,
+          "sha256": "34855a59ff6229b414439502ab8d993660a406f557ecf3ee36e79d4bc723fea9"
+        },
+        {
+          "source_path": "statistic01.py",
+          "archive_path": "legacy_sources/cienciaDeDados/statistic01.py",
+          "size": 737,
+          "sha256": "f05aa6f13f7648d9559d3c439468f381a45dde9771f7d213109b364429d6ce5a"
+        },
+        {
+          "source_path": "statistic02.py",
+          "archive_path": "legacy_sources/cienciaDeDados/statistic02.py",
+          "size": 2484,
+          "sha256": "2565753973cfcb2d6107eed28d5284cc648a6d922ae185fda4bf07326e09dc8a"
+        },
+        {
+          "source_path": "statistic03.py",
+          "archive_path": "legacy_sources/cienciaDeDados/statistic03.py",
+          "size": 1557,
+          "sha256": "960299291a4d75e4c8acaf634926bd7951fee6af50a132cc82f6fb77e84289fa"
+        },
+        {
+          "source_path": "statistic04.py",
+          "archive_path": "legacy_sources/cienciaDeDados/statistic04.py",
+          "size": 1253,
+          "sha256": "62ef9e4f955efb635aeb3b5429a0bc670c8e722df50c9a93f69868668df630fb"
+        },
+        {
+          "source_path": "statistic05.py",
+          "archive_path": "legacy_sources/cienciaDeDados/statistic05.py",
+          "size": 1802,
+          "sha256": "3db637d0031c378c8cdb3dd8c218b6b94280d59b4d6c29800a0bf19115923029"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.name",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/cienciaDeDados.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/csv-plugin.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/workspace.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "MachineLearn01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "RNA01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "RNA02.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "VC01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "automation01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "automation02.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "automation03.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botAtomation01.botproj",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/MANIFEST.in",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/README.md",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/VERSION",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.botproj",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.egg-info/PKG-INFO",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.egg-info/SOURCES.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.egg-info/dependency_links.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.egg-info/requires.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase.egg-info/top_level.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/__init__.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/__main__.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/bot.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/resources/cotacao_biticoin.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/resources/pesquisar.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/resources/resumo_mercado.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/botbase/resources/start.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/build.bat",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/build.sh",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/requirements.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "botbase/setup.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "chromedriver/chromedriver.exe",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/advertising.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Distribuicao da populacao (em relacao a coluna) por Regiao de Saude segundo Municipio 2020.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Indicadores de mortalidade por DCNT - TME diabete melito por Ano segundo Regiao de Saude 2011 a 2021.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Indicadores de mortalidade por DCNT - TME diabete melito por Ano segundo Sexo.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Indicadores de mortalidade por DCNT - TME diabete melito por Faixa etaria DCNT segundo Ano 2011 a 2021.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Indicadores de mortalidade por DCNT - TME diabete melito por Sexo segundo Ano 2011 a 2021.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Indicadores de mortalidade por DCNT - TME diabete melito por Sexo segundo Regiao de Saude 2021.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Proporcao de idosos na populacao por Regiao de Saude segundo Municipio 2020.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/TME diabete melito por Região de Saúde segundo Faixa etária.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/TME diabete melito por Sexo segundo Região de Saúde.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Taxas de Mortalidade por Doenças Crônicas Não Transmissíveis (DCNT) distribuição.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/baiana.rar",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/baiana2.rar",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/indice de envelhecimento por Regiao de Saude segundo Sexo.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/mapa cloro RJ.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/mapa cloro RJ.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/baiana/Índice de envelhecimento – A.15.pdf",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/casas.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/cotacaoValores.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/dados_aula1_estados_brasil.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/dados_aula1_pnad.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/dados_aula1_pnad.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/exemplo1.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/house_prices.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/mapa.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/noticias.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/noticias.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/novos.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/plano_saude.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/taxaBrutaMortalidade.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/trabalho_02.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/tx_bruta_mort1.xlsx",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "data/votos_presidente_camara.csv",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner02.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner03.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner04.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner05.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner06.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner07.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner08.ipynb",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "dataMiner09.ipynb",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "html/graph.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "html/temp-plot.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "html/votosDeputados2021.html",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/elections.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/graficoRL.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/graficoResidual.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/grafico_All.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/plotBoxPlot-2021-tx_bruta.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/plotScatterPlot-2021-tx_bruta.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "img/votos da camara.png",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "maps01.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "python_firebase.py",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "storytelling01.md",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "windows_v1.8.0/data/predefined_classes.txt",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": "windows_v1.8.0/labelImg.exe",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "notificacao_com_python",
+      "url": "https://github.com/0rakul0/notificacao_com_python",
+      "branch": "main",
+      "source_commit": "96e69c24a6473182d3089cf8458f321b4e95403c",
+      "archive_files": 2,
+      "archive_bytes": 632,
+      "included": [
+        {
+          "source_path": "AlertPython.py",
+          "archive_path": "legacy_sources/notificacao_com_python/AlertPython.py",
+          "size": 457,
+          "sha256": "1a7d50f42ffab33f5eeafebb56514772ece31b99113e6646fd7f63419fe9f9a5"
+        },
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/notificacao_com_python/README.md",
+          "size": 175,
+          "sha256": "3c4de22c6c9c82d39fe41c07050983bf2be59dd1e1285ba45b76c16b2c6b3159"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".gitattributes",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/Project_Default.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/misc.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/notificacao_com_python.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    },
+    {
+      "repository": "cotacoes_frontend_react",
+      "url": "https://github.com/0rakul0/cotacoes_frontend_react",
+      "branch": "master",
+      "source_commit": "59a8ee3d35c4594e7c8c843b1f0946520ce6d2e0",
+      "archive_files": 4,
+      "archive_bytes": 19086,
+      "included": [
+        {
+          "source_path": "README.md",
+          "archive_path": "legacy_sources/cotacoes_frontend_react/README.md",
+          "size": 1690,
+          "sha256": "ea20f909c42775fbb0d41f3d8b6f7f792a73eb04288f5e5896f5751547e42954"
+        },
+        {
+          "source_path": "app.js",
+          "archive_path": "legacy_sources/cotacoes_frontend_react/app.js",
+          "size": 9123,
+          "sha256": "5562cee05f1c04b0ff36a5a815279bd38ae3cf1bd95ee59c942c09570195dfe6"
+        },
+        {
+          "source_path": "index.html",
+          "archive_path": "legacy_sources/cotacoes_frontend_react/index.html",
+          "size": 3787,
+          "sha256": "3d8e4764b16715dc6d2936b38d985d9378c822ae04d7e883a00564afc8d7be4a"
+        },
+        {
+          "source_path": "style.css",
+          "archive_path": "legacy_sources/cotacoes_frontend_react/style.css",
+          "size": 4486,
+          "sha256": "d668004d25022bd5b4edff44252194fa43a0d35506527194a1bf096767a87473"
+        }
+      ],
+      "excluded": [
+        {
+          "path": ".gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/.gitignore",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/frontend_react.iml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/Project_Default.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/inspectionProfiles/profiles_settings.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/modules.xml",
+          "reason": "outside_financial_archive_scope"
+        },
+        {
+          "path": ".idea/vcs.xml",
+          "reason": "outside_financial_archive_scope"
+        }
+      ],
+      "complete_repository_backup": false
+    }
+  ]
+}

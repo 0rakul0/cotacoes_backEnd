@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cotações e acompanhamento de carteira">
+<title>Cotações • Painel financeiro</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+ <div class="brand"><span class="brand-icon">◈</span><div><strong>Cotações</strong><small>Monitor de ativos</small></div></div>
+ <div class="top-actions"><span class="status" id="api-status">Conectando...</span><button id="refresh-all" class="primary">↻ Atualizar cotações</button></div>
+</header>
+<main class="container">
+ <section class="intro"><div><p class="eyebrow">VISÃO GERAL</p><h1>Seus ativos, em um só lugar.</h1><p class="muted">Acompanhe preços históricos e organize suas posições. Valores podem estar defasados.</p></div></section>
+ <div id="notice" role="status" aria-live="polite"></div>
+ <section class="overview" id="overview" aria-label="Resumo da carteira"></section>
+ <div class="two-col">
+  <section class="panel">
+   <div class="heading"><div><h2>Ativos acompanhados</h2><p>Selecione um ativo para consultar seu histórico.</p></div></div>
+   <form id="asset-form" class="inline-form"><label class="sr-only" for="symbol">Ticker</label><input id="symbol" placeholder="Ex.: PETR4, BTC-BRL" maxlength="25" required><button type="submit" class="primary">Adicionar</button></form>
+   <div class="table-wrap"><table><thead><tr><th>Ativo</th><th>Último preço</th><th>Data</th><th></th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Carregando...</td></tr></tbody></table></div>
+  </section>
+  <section class="panel chart-panel">
+   <div class="heading"><div><h2 id="chart-title">Histórico</h2><p id="chart-subtitle">Selecione um ativo.</p></div><label for="period" class="sr-only">Período</label><select id="period"><option value="1mo">1 mês</option><option value="3mo">3 meses</option><option value="6mo" selected>6 meses</option><option value="1y">1 ano</option><option value="5y">5 anos</option><option value="max">Tudo</option></select></div>
+   <div class="chart-wrapper"><svg id="chart" viewBox="0 0 760 300" role="img" aria-label="Gráfico de cotações históricas"></svg><div id="chart-empty" class="chart-empty">Selecione um ativo ou atualize os dados.</div></div>
+   <p class="chart-note">Fechamentos históricos • Não representa negociação em tempo real</p>
+  </section>
+ </div>
+ <section class="panel portfolio">
+  <div class="heading"><div><h2>Minha carteira</h2><p>Posições com custo médio informado por você.</p></div></div>
+  <form id="position-form" class="position-form">
+   <label>Ticker<input id="pos-symbol" placeholder="PETR4" required></label>
+   <label>Quantidade<input id="pos-quantity" type="number" min="0.00000001" step="any" required placeholder="10"></label>
+   <label>Preço médio<input id="pos-cost" type="number" min="0" step="any" required placeholder="35,00"></label>
+   <label>Moeda<select id="pos-currency"><option value="BRL">BRL</option><option value="USD">USD</option></select></label>
+   <button class="primary" type="submit">Salvar posição</button>
+  </form>
+  <div class="table-wrap"><table><thead><tr><th>Ativo</th><th>Quantidade</th><th>Custo médio</th><th>Último preço</th><th>Valor estimado</th><th>Resultado</th><th></th></tr></thead><tbody id="position-rows"></tbody></table></div>
+  <p class="footnote">Posições são estimativas, sem taxas, proventos, impostos ou variação cambial. Dados são armazenados no servidor.</p>
+ </section>
+</main>
+<footer> Cotações • Projeto pessoal de monitoramento de ativos • Não constitui recomendação de investimento.</footer>
+</body></html>
