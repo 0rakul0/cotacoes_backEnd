@@ -1,0 +1,27 @@
+# Exemplo: salve em /etc/systemd/system/cotacoes.service e ajuste os caminhos.
+# Execute: sudo systemctl daemon-reload
+#          sudo systemctl enable --now cotacoes
+#          sudo systemctl status cotacoes
+#          sudo systemctl restart cotacoes
+[Unit]
+Description=Cotacoes FastAPI backend
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=USUARIO
+Group=USUARIO
+WorkingDirectory=/home/USUARIO/cotacoes_backEnd
+Environment=PYTHONUNBUFFERED=1
+Environment=COTACOES_DB_PATH=/home/USUARIO/cotacoes_backEnd/data/cotacoes.sqlite3
+# Para acesso via proxy reverso local, mantenha 127.0.0.1.
+# Configure token e HTTPS antes de expor via rede.
+ExecStart=/home/USUARIO/cotacoes_backEnd/.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 7777
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

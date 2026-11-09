@@ -1,11 +1,25 @@
-# Test your FastAPI endpoints
-
-GET http://127.0.0.1:7777/
+### API
+GET http://127.0.0.1:7777/api/health
 Accept: application/json
 
-###
-
-GET http://127.0.0.1:7777/get_data
+### Ativos
+GET http://127.0.0.1:7777/api/assets
 Accept: application/json
 
-###
+### Adicionar ticker
+POST http://127.0.0.1:7777/api/assets
+Content-Type: application/json
+
+{"symbol":"PETR4"}
+
+### Atualizar precos (rede necessaria)
+POST http://127.0.0.1:7777/api/assets/PETR4/refresh?force=true
+
+### Ver risco apos atualizar precos
+GET http://127.0.0.1:7777/api/analysis/risk/PETR4?days=365
+
+### Correlacao
+GET http://127.0.0.1:7777/api/analysis/correlation?symbols=PETR4,VALE3&days=365
+
+### Carteira
+GET http://127.0.0.1:7777/api/portfolio
