@@ -180,3 +180,44 @@ Os testes usam SQLite temporário e mocks; não requisitam dados reais em rede. 
 ## Preservação dos projetos financeiros antigos
 
 A migração foi organizada em `migration/README.md`, com commits fixos de origem, snapshots de código/dados em `legacy_sources/` e um script de backup local do histórico Git (não publicado automaticamente). Não apague os repositórios antigos sem validar todos os backups e o `legacy_sources/manifest.json`.
+
+## Modelos preditivos individuais por ativo (v0.4)
+
+O registro de modelos agora é **por ticker e arquitetura**, não um único modelo treinado para todos os ativos. Cada ticker acompanhado aparece em `GET /api/models` com estado `not_trained`, `candidate` ou `selected`. Os pesos do `TimesSeriesAgent` original estão arquivados em `legacy_sources/` e **não são carregados automaticamente**: foram treinados com dados, features e normalizadores antigos, sem separação temporal rigorosa.
+
+### Treinamento individual
+
+Antes, atualize as cotações com `POST /api/assets/{symbol}/refresh` ou `python -m monitoramento.monitorar --once`. O treinamento só utiliza o SQLite local; não faz chamadas externas.
+
+    python -m cotacoes.model_jobs train --symbol PETR4 --family ridge
+    python -m cotacoes.model_jobs train --all --family ridge
+    python -m cotacoes.model_jobs status
+
+O modelo `ridge` é uma referência treinável e leve que permite verificar a qualidade dos dados e a seleção antes de instalar bibliotecas de IA. Para treinar as três arquiteturas do `TimesSeriesAgent`, em **ambiente separado de treinamento**, instale:
+
+    pip install -r requirements-ml.txt
+    python -m cotacoes.model_jobs train --symbol PETR4 --family all --epochs 60
+
+Famílias disponíveis: `ridge`, `lstm`, `autoencoder` e `transformer`. `--all` percorre todos os tickers já acompanhados (e pula os que ainda não têm dados suficientes), enquanto `--family all` treina quatro candidatos para um ticker. **Nenhum modelo é treinado automaticamente pelo endpoint de cadastro ou por uma requisição GET.** Para agendar treinamento, use um serviço externo de worker/timer; não rode `--family all` em cada atualização de preço.
+
+### Garantias metodológicas e limitações
+
+- Cada ativo tem seus próprios parâmetros e artefatos em `data/model_artifacts/{symbol}/{family}/`, com SHA-256 verificado na leitura. O diretório deve persistir fora do Git e receber backup privado.
+- Um registro por versão permanece no SQLite `model_runs`: ticker, arquitetura, data final dos preços, quantidades de observações, janela e métricas de validação/teste.
+- A primeira execução exige **pelo menos 260 fechamentos** contínuos (sem lacunas superiores a 10 dias) e usa retornos logarítmicos de fechamento.
+- Partição **cronológica** 70% treino, 15% validação, 15% teste. Normalização calculada somente no bloco de treino. O teste não participa da escolha de arquitetura, e o baseline é prever retorno zero (último fechamento).
+- Seleção por RMSE de **validação**, exigindo melhoria mínima de 1% contra o baseline; se nenhum candidato superar a referência, o ativo permanece sem modelo selecionado. A métrica de teste é apresentada separadamente, sem alegação de desempenho futuro.
+- O treino é de horizonte **D+1**, um fechamento por passo. Não considera juros, dividendos, desdobramentos, feriados, operações ou eventos de notícias.
+- A API não abre checkpoints antigos `.pt` do projeto de pesquisa. Os novos pesos PyTorch são `state_dict` próprios, carregados com `weights_only=True` após verificar o SHA-256 do arquivo; por isso não há confiança implícita em pickles de fontes antigas.
+- Se o histórico estiver defasado mais de 14 dias, o endpoint recusa a inferência. O campo `stale_model` avisa sobre tempo decorrido desde o último treino.
+- Os testes unitários usam dados sintéticos, e os modelos não são validados para aconselhamento financeiro.
+
+### Endpoints de modelos
+
+| Método | Endpoint | Ação |
+| --- | --- | --- |
+| GET | `/api/models` | Lista status por ativo acompanhado |
+| GET | `/api/models/{symbol}` | Versões, métricas e modelo selecionado do ativo |
+| GET | `/api/models/{symbol}/forecast` | Previsão experimental de D+1 para modelo validado |
+
+O backend pode responder `409` se ainda não houver candidato aceito, e `503` caso um modelo neural selecionado não tenha seus pesos ou a biblioteca PyTorch instalados no ambiente da API. Configure `COTACOES_MODELS_DIR` para um diretório persistente acessível ao worker e à API. Os endpoints de previsão não realizam treinamento.

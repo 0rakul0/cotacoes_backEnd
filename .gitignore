@@ -11,3 +11,6 @@ data/
 *.sqlite3-shm
 cotacoes/graficos/
 monitoramento/graficos/
+
+# Modelos treinados no servidor (nao publicar pesos ou metadados de uso)
+data/model_artifacts/

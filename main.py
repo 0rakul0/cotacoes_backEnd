@@ -13,11 +13,11 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from cotacoes import allocation, analysis, fundamentals, ledger, market, service, storage
+from cotacoes import allocation, analysis, fundamentals, ledger, market, model_registry, model_training, service, storage
 
 app = FastAPI(
     title="Cotacoes API",
-    version="0.3.0",
+    version="0.4.0",
     description="Acompanhamento financeiro e analise historica. Nao e recomendacao de investimento.",
 )
 FRONTEND = Path(
@@ -30,6 +30,7 @@ def startup():
     storage.initialize()
     ledger.initialize()
     fundamentals.initialize()
+    model_registry.initialize()
 
 
 @app.middleware("http")
@@ -110,7 +111,7 @@ def home():
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "version": "0.3.0"}
+    return {"status": "ok", "version": "0.4.0"}
 
 
 @app.get("/api/assets")
@@ -177,6 +178,27 @@ def refresh_dividends(symbol: str, force: bool = Query(False)):
         return fundamentals.refresh_dividends(symbol, force)
     except Exception as exc:
         provider_error(exc)
+
+
+@app.get("/api/models")
+def list_model_status():
+    return model_registry.all_status()
+
+
+@app.get("/api/models/{symbol}")
+def model_status(symbol: str):
+    return model_registry.overview(tracked(symbol))
+
+
+@app.get("/api/models/{symbol}/forecast")
+def model_forecast(symbol: str):
+    symbol = tracked(symbol)
+    try:
+        return model_training.forecast(symbol)
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    except (ImportError, FileNotFoundError, OSError) as exc:
+        raise HTTPException(status_code=503, detail="Artefato ou dependencia de modelo indisponivel.") from exc
 
 
 @app.get("/api/analysis/risk/{symbol}")
