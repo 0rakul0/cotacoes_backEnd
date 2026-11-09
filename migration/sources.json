@@ -1,0 +1,37 @@
+[
+  {
+    "repository": "TimesSeriesAgent",
+    "branch": "master",
+    "sha": "f40c5605a10909a0d0e159639e9e4fd45a04053f"
+  },
+  {
+    "repository": "cotacaopython",
+    "branch": "main",
+    "sha": "33177303c185f72aef21fdaa179eeb6777e88a08"
+  },
+  {
+    "repository": "analise_fundamental",
+    "branch": "main",
+    "sha": "0836255d0baa1c66c6cece18b430c89ce9ef5e19"
+  },
+  {
+    "repository": "Projeto_ciencia_de_dados_acoes",
+    "branch": "main",
+    "sha": "57b5ceb3784a8512044bfe134a5a0af46ef606dd"
+  },
+  {
+    "repository": "cienciaDeDados",
+    "branch": "main",
+    "sha": "ec23846c60a79df45b5a64498d16b5610fa91ee5"
+  },
+  {
+    "repository": "notificacao_com_python",
+    "branch": "main",
+    "sha": "96e69c24a6473182d3089cf8458f321b4e95403c"
+  },
+  {
+    "repository": "cotacoes_frontend_react",
+    "branch": "master",
+    "sha": "59a8ee3d35c4594e7c8c843b1f0946520ce6d2e0"
+  }
+]

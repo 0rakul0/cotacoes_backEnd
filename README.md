@@ -1,6 +1,6 @@
 # Cotações — FastAPI, carteira e análise financeira
 
-Aplicação pessoal para acompanhar ativos da B3, FIIs, BDRs, criptoativos e ações internacionais. A API é construída em **FastAPI**, utiliza **SQLite** e oferece histórico de preços, carteira, operações, proventos, risco e indicadores financeiros. O frontend estático é mantido em [cotacoes_frontend_react](https://github.com/0rakul0/cotacoes_frontend_react).
+Aplicação pessoal para acompanhar ativos da B3, FIIs, BDRs, criptoativos e ações internacionais. A API é construída em **FastAPI**, utiliza **SQLite** e oferece histórico de preços, carteira, operações, proventos, risco e indicadores financeiros. O frontend estático HTML/CSS/JavaScript agora está **incorporado em `frontend/`** deste repositório; o projeto original [cotacoes_frontend_react](https://github.com/0rakul0/cotacoes_frontend_react) é mantido somente como origem histórica até verificação do backup.
 
 **Branch principal deste repositório: `master`.** O repositório ainda não possui uma branch chamada `main`. Mudanças foram aplicadas à branch principal existente, sem criação de novas branches.
 
@@ -40,7 +40,7 @@ Windows PowerShell:
     pip install -r requirements.txt
     python -m uvicorn main:app --host 127.0.0.1 --port 7777
 
-Para incluir o painel web, faça `git clone https://github.com/0rakul0/cotacoes_frontend_react.git frontend` dentro deste repositório. Alternativamente, use `COTACOES_FRONTEND_DIR` apontando para a pasta contendo `index.html`, `style.css` e `app.js`. O FastAPI servirá ambos na mesma origem.
+O painel web está incluído em `frontend/`, sem necessidade de clonar outro repositório ou instalar Node.js. Opcionalmente, use `COTACOES_FRONTEND_DIR` para servir uma versão alternativa dos arquivos.
 
 - Painel: http://127.0.0.1:7777
 - Swagger: http://127.0.0.1:7777/docs
@@ -176,3 +176,7 @@ Os testes usam SQLite temporário e mocks; não requisitam dados reais em rede. 
 5. Painel web de operações, FIIs, risco e alertas, usando os endpoints novos.
 
 > Projeto pessoal de estudo e acompanhamento. Não constitui orientação de compra ou venda. Fontes de mercado podem falhar, sofrer atraso ou retornar dados incompletos.
+
+## Preservação dos projetos financeiros antigos
+
+A migração foi organizada em `migration/README.md`, com commits fixos de origem, snapshots de código/dados em `legacy_sources/` e um script de backup local do histórico Git (não publicado automaticamente). Não apague os repositórios antigos sem validar todos os backups e o `legacy_sources/manifest.json`.
