@@ -13,7 +13,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from cotacoes import analysis, fundamentals, ledger, market, service, storage
+from cotacoes import allocation, analysis, fundamentals, ledger, market, service, storage
 
 app = FastAPI(
     title="Cotacoes API",
@@ -206,6 +206,11 @@ def correlation(symbols: str = Query(..., description="Tickers separados por vir
         return analysis.correlation_matrix(symbols_list, days, rolling_days)
     except ValueError as exc:
         user_error(exc)
+
+
+@app.get("/api/analysis/allocation")
+def portfolio_allocation():
+    return allocation.allocation()
 
 
 @app.get("/api/analysis/portfolio-risk")

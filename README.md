@@ -101,6 +101,7 @@ Tipos permitidos: `DIVIDEND`, `JCP`, `RENTAL`, `OTHER`. O resultado da carteira 
 | GET | `/api/analysis/risk/PETR4?days=365&confidence=0.95` | Volatilidade, drawdown, VaR e CVaR |
 | GET | `/api/analysis/events/PETR4?days=365&threshold_pct=2` | Dias com oscilação acima do limiar |
 | GET | `/api/analysis/correlation?symbols=PETR4,VALE3&days=365` | Correlação de Pearson dos retornos diários e janela móvel |
+| GET | `/api/analysis/allocation` | Concentração por ticker, setor e moeda (sem conversão implícita) |
 | GET | `/api/analysis/portfolio-risk?days=365` | Risco histórico **hipotético** com pesos atuais constantes |
 
 Regras:
@@ -110,6 +111,7 @@ Regras:
 - Volatilidade anualizada usa 252 sessões para ações/FIIs e 365 para BTC/ETH/SOL.
 - VaR e CVaR são **estimativas históricas da pior cauda discreta**. Não garantem limites de perda.
 - Correlação só é calculada para pares com mesma moeda e datas de retornos compartilhadas.
+- A concentração mostra pesos por ticker, setor e classe, além do índice HHI e número efetivo de ativos por moeda; classificações ausentes são explicitadas.
 - Risco da carteira usa os pesos **atuais** e rebalanceamento hipotético: não reconstrói a carteira histórica.
 - Preços não incluem taxas, impostos, câmbio, dividendos ou inflação; para retorno total de longo prazo ainda falta um motor de eventos corporativos.
 
