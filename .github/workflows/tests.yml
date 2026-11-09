@@ -19,5 +19,7 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Compile Python files
         run: python -m compileall -q main.py cotacoes tests
+      - name: Check frontend JavaScript syntax
+        run: node --check frontend/app.js
       - name: Unit and API tests
         run: python -m pytest -q

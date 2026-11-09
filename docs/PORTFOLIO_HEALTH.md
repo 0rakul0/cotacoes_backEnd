@@ -62,7 +62,7 @@ Extração preliminar de páginas e códigos de títulos (não confirma fatos au
     pip install -r requirements-documents.txt
     python -m cotacoes.document_pipeline extract --symbol MXRF11 --pdf /caminho/relatorio.pdf --url "https://fnet.bmfbovespa.com.br/fnet/publico/exibirDocumento?id=1367646" --reference-date 2026-09-30 --published-at 2026-11-03
 
-O arquivo staging gerado contém páginas, trechos candidatos, códigos e SHA-256. A revisão de tabelas e garantias é obrigatória. Nenhum código legado é executado nem PDFs são enviados ao Git.
+O arquivo staging gerado contém páginas, tabelas candidatas extraídas, trechos candidatos, códigos e SHA-256. A contagem de CRIs e os totais financeiros devem ser reconciliados manualmente antes de marcar cobertura completa. A revisão de tabelas e garantias é obrigatória. Nenhum código legado é executado nem PDFs são enviados ao Git.
 
 ## Endpoints
 

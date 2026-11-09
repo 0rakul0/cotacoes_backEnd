@@ -80,6 +80,33 @@ def fetch_pdf(symbol: str, url: str) -> dict:
             "status": "downloaded_unreviewed"}
 
 
+def collect_candidate_tables(page, max_tables: int = 12) -> list[dict]:
+    """Tabelas extraidas sao CANDIDATAS; precisam ser confrontadas com o PDF."""
+    try:
+        extracted = page.find_tables()
+    except (AttributeError, RuntimeError, ValueError, TypeError):
+        return []
+    rows = []
+    for table_index, table in enumerate(list(extracted.tables)[:max_tables]):
+        try:
+            data = table.extract()
+        except (AttributeError, RuntimeError, ValueError, TypeError):
+            continue
+        if not data:
+            continue
+        values = []
+        for row in data[:200]:
+            if row is None:
+                continue
+            values.append([str(cell or "").strip()[:300] for cell in row[:20]])
+        if not values:
+            continue
+        rows.append({"table_index": table_index, "rows": values,
+                     "truncated": len(data) > len(values),
+                     "review_status": "unverified_pdf_extraction"})
+    return rows
+
+
 def extract_pdf(symbol: str, pdf_path: Path, source_url: str,
                 reference_date: str, published_at: str) -> dict:
     try:
@@ -107,6 +134,7 @@ def extract_pdf(symbol: str, pdf_path: Path, source_url: str,
     pages = []
     codes = {}
     hits = []
+    total_tables = 0
     for i, page in enumerate(pdf):
         body = page.get_text("text", sort=True)
         # Sem OCR automatico. Se corpo for vazio, marcar revisao manual.
@@ -121,8 +149,11 @@ def extract_pdf(symbol: str, pdf_path: Path, source_url: str,
                      .replace("ó", "o").replace("í", "i"))
             if len(trimmed) >= 5 and any(word in clean for word in KEYWORDS):
                 line_hits.append(trimmed[:260])
+        candidate_tables = collect_candidate_tables(page)
+        total_tables += len(candidate_tables)
         pages.append({
-            "page": i + 1, "characters": len(body),
+            "page": i + 1,
+            "candidate_tables": candidate_tables, "characters": len(body),
             "text": body[:220000], "codes": matches,
             "signal_lines": line_hits[:100],
             "needs_ocr_or_manual_review": len(body.strip()) < 80,
@@ -137,6 +168,14 @@ def extract_pdf(symbol: str, pdf_path: Path, source_url: str,
         "security_codes": [{"code": code, "pages": page_list}
                            for code, page_list in sorted(codes.items())],
         "signals": hits, "pages": pages,
+        "candidate_table_count": total_tables,
+        "review_checklist": [
+            "Conferir tabelas no PDF original, especialmente linhas quebradas e notas de rodape.",
+            "Reconciliar o numero de CRIs/CRAs, volumes e percentual com total divulgado.",
+            "Validar taxas, garantias, datas e devedores na securitizadora.",
+            "Nao inferir dia do cupom com base apenas na periodicidade.",
+            "Manter vacancia desconhecida se nao houver taxa divulgada.",
+        ],
         "note": "Evidencias candidatas. Rever no PDF original e estruturar manualmente posicoes, vencimentos e riscos antes de importar no banco.",
     }
     base = data_root() / symbol
@@ -146,7 +185,8 @@ def extract_pdf(symbol: str, pdf_path: Path, source_url: str,
                       encoding="utf-8")
     return {"symbol": symbol, "source_url": source_url, "sha256": checksum,
             "pages": pdf.page_count, "security_codes": len(codes),
-            "signal_lines": len(hits), "staging_file": str(target)}
+            "signal_lines": len(hits), "candidate_tables": total_tables,
+            "staging_file": str(target)}
 
 
 def import_reviewed(path: Path) -> dict:
