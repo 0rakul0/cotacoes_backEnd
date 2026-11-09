@@ -31,3 +31,9 @@ def test_reject_sensitive_or_generated_files():
     assert not eligible("TimesSeriesAgent", "test/../../.env")
     assert not eligible("cotacaopython", "chromedriver105/chromedriver.exe")
     assert not eligible("cienciaDeDados", "data/house_prices.csv")
+
+
+def test_preserved_snapshot_integrity():
+    from scripts.migrate_legacy import MANIFEST, verify
+    assert MANIFEST.is_file(), "Snapshot legado ausente da master."
+    verify()
