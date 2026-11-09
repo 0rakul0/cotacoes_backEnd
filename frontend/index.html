@@ -28,6 +28,42 @@
    <p class="chart-note">Fechamentos históricos • Não representa negociação em tempo real</p>
   </section>
  </div>
+
+ <section class="panel research-section" id="research">
+  <div class="heading">
+   <div><p class="eyebrow">INVESTIGAÇÃO DOCUMENTAL</p><h2>Saúde da carteira do fundo</h2>
+   <p>Lastro de CRIs, FIIs investidos e empreendimentos. Indicadores com fontes e data-base.</p></div>
+  </div>
+  <form class="inline-form" id="research-form">
+    <label class="sr-only" for="research-symbol">Ticker do fundo</label>
+    <input id="research-symbol" value="MXRF11" placeholder="MXRF11" maxlength="25">
+    <button type="submit" class="primary">Investigar</button>
+  </form>
+  <div id="research-meta" class="footnote">Relatórios ainda não carregados.</div>
+  <div id="research-metrics" class="research-metrics"></div>
+  <div class="heading"><div><h2>Ocorrências e pontos de atenção</h2>
+   <p>Alertas documentados ou derivados de regras de triagem, sem estimar probabilidade de perda.</p></div></div>
+  <div id="research-alerts" class="research-alerts"></div>
+  <div class="heading research-table-heading">
+    <div><h2>Posições do fundo</h2><p>Seleção documentada. Sem informação não significa risco zero.</p></div>
+    <div class="research-filters"><label for="research-category" class="sr-only">Categoria de investimento</label>
+      <select id="research-category"><option value="">Todas categorias</option><option value="CRI">CRI</option><option value="CRA">CRA</option><option value="FII">FII</option><option value="PERMUTA">Permutas</option><option value="IMOVEL">Imóveis</option></select>
+      <label for="research-risk" class="sr-only">Risco da posição</label>
+      <select id="research-risk"><option value="">Todos os riscos</option><option value="critico">Crítico</option><option value="atencao">Atenção</option><option value="monitoramento">Monitoramento</option><option value="sem_avaliacao">Sem avaliação</option></select>
+    </div>
+  </div>
+  <div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Investimento / Devedor</th><th>Exposição</th><th>Pagamento / Entrega</th><th>Triagem</th></tr></thead><tbody id="research-rows"><tr><td colspan="5">Carregando...</td></tr></tbody></table></div>
+  <div id="research-detail" class="research-detail" role="status" aria-live="polite"></div>
+  <div class="heading"><div><h2>Calendário confirmado</h2><p>Datas certas apenas quando aparecem nos documentos oficiais. Frequência mensal não define dia.</p></div></div>
+  <div id="research-calendar" class="research-calendar"></div>
+  <div class="heading"><div><h2>Documentos oficiais</h2><p>Acesse o documento de origem e verifique a versão e a data.</p></div></div>
+  <div id="research-sources" class="research-sources"></div>
+ </section>
+ <section class="panel model-section">
+  <div class="heading"><div><h2>Modelos individuais por ativo</h2><p>Treinamento por ticker, com avaliação temporal e seleção contra o último fechamento.</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th>Ativo</th><th>Situação</th><th>Melhor arquitetura</th><th>RMSE (teste)</th><th></th></tr></thead><tbody id="model-rows"><tr><td colspan="5">Carregando modelos...</td></tr></tbody></table></div>
+  <p id="model-output" class="model-output" role="status" aria-live="polite">A criação de modelos é feita no servidor, fora das requisições da interface. Previsões são experimentais.</p>
+ </section>
  <section class="panel portfolio">
   <div class="heading"><div><h2>Minha carteira</h2><p>Posições com custo médio informado por você.</p></div></div>
   <form id="position-form" class="position-form">

@@ -221,3 +221,21 @@ Famílias disponíveis: `ridge`, `lstm`, `autoencoder` e `transformer`. `--all` 
 | GET | `/api/models/{symbol}/forecast` | Previsão experimental de D+1 para modelo validado |
 
 O backend pode responder `409` se ainda não houver candidato aceito, e `503` caso um modelo neural selecionado não tenha seus pesos ou a biblioteca PyTorch instalados no ambiente da API. Configure `COTACOES_MODELS_DIR` para um diretório persistente acessível ao worker e à API. Os endpoints de previsão não realizam treinamento.
+
+## Saúde da carteira do fundo: investigação documental (MXRF11)
+
+O módulo de pesquisa documental foi criado em cotacoes/portfolio_health.py, com coletor de PDF separado em cotacoes/document_pipeline.py. Ele analisa posições **dentro** do ativo escolhido: CRIs/CRAs, FIIs/Fiagros investidos, permutas e imóveis. Avalia riscos de crédito, garantias, execução de obras, vendas e vacância locatícia quando houver dados verificados.
+
+O exemplo MXRF11 é baseado no relatório gerencial de **setembro de 2026** (publicado em 03/11/2026) e no aviso de rendimentos de outubro. O piloto cataloga 23 posições e 5 ocorrências, com classificação **PARCIAL**. **Não representa todo o portfólio.** Documentos são ligados diretamente às fontes oficiais do FNET/B3.
+
+A tela "Saúde da carteira do fundo" no dashboard permite investigar MXRF11, ver alertas e filtrar posições. Não inventa datas de cupons a partir da expressão "periodicidade mensal". O calendário informa apenas datas de pagamento explícitas ou mês de vencimento.
+
+Endpoints: /api/funds/MXRF11/health, /documents, /holdings, /holdings/{id} e /calendar.
+
+Execute o importador manual: python -m cotacoes.document_pipeline import --file examples/mxrf11_2026_09.json
+
+Para extrair um PDF oficial e produzir um staging que precisa de revisão: pip install -r requirements-documents.txt.
+
+Documentação, regras e fontes: docs/PORTFOLIO_HEALTH.md. O piloto é carregado uma única vez, se o banco ainda não contiver pesquisa MXRF11, salvo COTACOES_SEED_HEALTH_EXAMPLE=0.
+
+**Importante:** não inferir saúde boa por falta de documentos. Vacância locatícia não é o mesmo que estoque de apartamentos ainda não vendidos. Modelos de preço por ativo e risco jurídico/contratual são análises diferentes.

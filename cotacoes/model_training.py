@@ -58,10 +58,14 @@ def prepare(symbol: str, days: int = 1825, window: int = DEFAULT_WINDOW) -> dict
     mean = float(y[:train_end].mean())
     std = float(y[:train_end].std())
     std = max(std, 1e-6)
-    fingerprint_data = [
-        [p["day"], round(float(p["close"]), 10), p["currency"], p["source"]]
-        for p in segment
-    ]
+    fingerprint_data = {
+        "feature_version": "univariate_log_returns_v1",
+        "window": window,
+        "close_history": [
+            [p["day"], round(float(p["close"]), 10), p["currency"], p["source"]]
+            for p in segment
+        ],
+    }
     fingerprint = hashlib.sha256(
         json.dumps(fingerprint_data, ensure_ascii=True, separators=(",", ":")).encode()
     ).hexdigest()

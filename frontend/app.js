@@ -81,7 +81,7 @@ async function refreshOne(symbol){
 }
 async function removeAsset(symbol){
  if(!confirm("Retirar "+symbol+" da lista de acompanhamento? O histórico e a posição serão mantidos."))return;
- try{await api("/api/assets/"+encodeURIComponent(symbol),{method:"DELETE"});if(selected===symbol)selected=null;await loadAssets();}
+ try{await api("/api/assets/"+encodeURIComponent(symbol),{method:"DELETE"});if(selected===symbol)selected=null;await loadAssets();await loadModels();}
  catch(e){notice(e.message);}
 }
 async function loadPortfolio(){
@@ -113,9 +113,176 @@ async function loadPortfolio(){
   addButton(actions,"×",async()=>{if(!confirm("Excluir a posição de "+p.symbol+"?"))return;try{await api("/api/portfolio/positions/"+encodeURIComponent(p.symbol),{method:"DELETE"});await loadPortfolio();}catch(e){notice(e.message);}});
  }
 }
+async function loadModels(){
+ try{
+  const data=await api("/api/models");
+  const tbody=$("model-rows");tbody.replaceChildren();
+  if(!data.assets.length){const row=tbody.insertRow();addCell(row,"Nenhum ativo acompanhado.");return;}
+  for(const item of data.assets){
+    const tr=tbody.insertRow();
+    addCell(tr,item.symbol);
+    addCell(tr,item.status==="selected"?"Validado":item.status==="candidate"?"Candidato — ainda não supera referência":"Aguardando treinamento",item.status==="selected"?"positive":"light");
+    const best=item.selected;
+    addCell(tr,best?best.family.toUpperCase():"—");
+    addCell(tr,best?best.metrics.test.rmse_pct.toFixed(3)+"%":"—");
+    const cell=addCell(tr,"");
+    if(best){addButton(cell,"Prever D+1",()=>showForecast(item.symbol),"ghost");}
+  }
+ }catch(e){$("model-output").textContent="Modelos indisponíveis: "+e.message;}
+}
+async function showForecast(symbol){
+ $("model-output").textContent="Consultando previsão validada de "+symbol+"...";
+ try{
+  const result=await api("/api/models/"+encodeURIComponent(symbol)+"/forecast");
+  const stale=result.stale_model?" • modelo com treino antigo":"";
+  $("model-output").textContent="Previsão experimental "+symbol+" ("+result.family.toUpperCase()+") para "+stampFmt(result.forecast_for)+": "+quoteFmt(result.predicted_next_close,result.currency)+" • fechamento conhecido "+stampFmt(result.latest_price_date)+" • não é recomendação de investimento"+stale;
+ }catch(e){$("model-output").textContent="Previsão de "+symbol+" indisponível: "+e.message;}
+}
+
+let activeResearch = null;
+const researchRiskRank = {critico:0,atencao:1,monitoramento:2,sem_avaliacao:3};
+const researchRiskNames = {critico:"Crítico",atencao:"Atenção",monitoramento:"Monitorar",sem_avaliacao:"Não avaliado"};
+function element(tag, text, cls){
+ const node=document.createElement(tag);
+ if(text!==undefined&&text!==null)node.textContent=String(text);
+ if(cls)node.className=cls;
+ return node;
+}
+function contentBlock(parent,label,value){
+ const div=element("article",undefined,"metric");
+ div.append(element("small",label),element("strong",value));
+ parent.append(div);
+}
+function safeSourceLink(doc){
+ const a=element("a",doc.title||doc.id,"source-link");
+ const url=new URL(doc.url);
+ if(url.protocol==="https:"&&["fnet.bmfbovespa.com.br","www.xpasset.com.br","xpasset.com.br","api.mziq.com"].includes(url.hostname)){
+  a.href=url.href;a.target="_blank";a.rel="noopener noreferrer";
+ }
+ return a;
+}
+function renderResearch(){
+ const data=activeResearch;
+ const tbody=$("research-rows");tbody.replaceChildren();
+ if(!data||data.status==="sem_documentos"){
+  $("research-meta").textContent="Nenhum relatório oficial revisado para esse ativo. Ausência de dados não significa carteira saudável.";
+  $("research-metrics").replaceChildren();$("research-alerts").replaceChildren();
+  $("research-calendar").replaceChildren();$("research-sources").replaceChildren();
+  $("research-detail").replaceChildren();
+  const tr=tbody.insertRow();addCell(tr,"Sem inventário documental disponível.");
+  return;
+ }
+ const dateText=stampFmt(data.reference_date);
+ $("research-meta").textContent="Referência: "+dateText+" • Cobertura "+(data.coverage==="parcial"?"PARCIAL":"completa")+" • "+
+   (data.outdated?"Dados antigos — revisar novos documentos":"Conferir novos comunicados para mudanças")+
+   " • "+data.summary.disclosed_holdings+" posições catalogadas";
+ const metrics=$("research-metrics");metrics.replaceChildren();
+ const alloc=data.overview.allocation_pct||{};
+ contentBlock(metrics,"Exposição em CRIs",(alloc.CRI??"—")+"%");
+ contentBlock(metrics,"FIIs investidos",(alloc.FII??"—")+"%");
+ contentBlock(metrics,"Permutas",(alloc.PERMUTA??"—")+"%");
+ const ratio=data.overview.cash_distribution_coverage_ratio;
+ contentBlock(metrics,"Cobertura de distribuição",ratio==null?"Não informada":qtyFmt(ratio*100)+"%");
+ const alerts=$("research-alerts");alerts.replaceChildren();
+ if(!data.findings.length)alerts.append(element("p","Nenhum alerta estruturado. Isso não comprova ausência de riscos.","muted"));
+ for(const f of data.findings.slice().sort((a,b)=>(researchRiskRank[a.risk]??3)-(researchRiskRank[b.risk]??3)).slice(0,16)){
+  const card=element("article",undefined,"research-alert");
+  card.append(element("strong",f.name+" • "+researchRiskNames[f.risk],f.risk==="critico"?"negative":f.risk==="atencao"?"research-warn":"light"));
+  for(const flag of f.flags)card.append(element("p",flag.reason+(flag.basis==="regra_de_triagem"?" (alerta por regra)":" (relatado em documento)")));
+  alerts.append(card);
+ }
+ const category=$("research-category").value, risk=$("research-risk").value;
+ const positions=data.exposures.filter(h=>(!category||h.category===category)&&(!risk||h.risk===risk))
+     .sort((a,b)=>(researchRiskRank[a.risk]??3)-(researchRiskRank[b.risk]??3));
+ if(!positions.length){
+  const tr=tbody.insertRow();addCell(tr,"Nenhuma posição nesse filtro.");
+ }
+ for(const h of positions){
+  const tr=tbody.insertRow();
+  addCell(tr,h.category);
+  const identity=addCell(tr,"");
+  addButton(identity,h.name,()=>showResearchDetail(h),"ticker");
+  identity.append(element("span",h.id,"sub"));
+  addCell(tr,h.nav_pct!=null?qtyFmt(h.nav_pct)+"% do PL":h.volume_brl_million!=null?"R$ "+qtyFmt(h.volume_brl_million)+" mi":"—");
+  let reference="A confirmar";
+  if(h.category==="PERMUTA"){
+   reference="Entrega "+(h.delivery_month||"não divulgada")+" • obras "+(h.construction_pct??"n/d")+"% • vendas "+(h.sales_pct??"n/d")+"%";
+  }else if(h.category==="CRI"||h.category==="CRA"){
+   reference="Vence "+(h.maturity_month||"não informado")+" • "+h.periodicity+
+    (h.exact_payment_day?" (dia "+h.exact_payment_day+")":" (dia não informado)");
+  }else if(h.category==="IMOVEL"||h.category==="FII"){
+   reference=h.vacancy_pct!=null?"Vacância reportada: "+qtyFmt(h.vacancy_pct)+"%":"Vacância não apurada";
+  }
+  addCell(tr,reference,"light");
+  addCell(tr,researchRiskNames[h.risk]||h.risk,h.risk==="critico"?"negative":h.risk==="atencao"?"research-warn":"light");
+ }
+ const sources=$("research-sources");sources.replaceChildren();
+ const byDoc={};for(const doc of data.source_documents)byDoc[doc.id]=doc;
+ for(const doc of data.source_documents){
+  const div=element("div",undefined,"research-source");
+  div.append(safeSourceLink(doc));
+  div.append(element("span"," Publicado "+stampFmt(doc.published_at),"light"));
+  sources.append(div);
+ }
+ if(data._calendar){
+  const calendar=$("research-calendar");calendar.replaceChildren();
+  for(const event of data._calendar.payments){
+   const div=element("div",undefined,"research-payment");
+   div.append(element("strong",stampFmt(event.payment_date)));
+   div.append(element("span",(event.kind==="rendimento_fundo"?"Rendimento do fundo":"Pagamento")+" • "+
+       (event.amount_per_unit!=null?quoteFmt(event.amount_per_unit,event.currency||"BRL")+"/cota":"valor não informado")));
+   calendar.append(div);
+  }
+  calendar.append(element("p",data._calendar.uncertain_coupon_dates.length+
+    " CRIs/CRAs sem dia exato de cupom no relatório. Não foram inventadas datas.","footnote"));
+ }
+}
+function showResearchDetail(holding){
+ const target=$("research-detail");target.replaceChildren();
+ target.append(element("strong",holding.name+" • "+holding.category));
+ const details=[
+  ["Código",holding.id],["Devedor",holding.borrower],["Setor",holding.sector],
+  ["Vencimento (mês/ano)",holding.maturity_month],
+  ["Frequência do cupom",holding.periodicity],
+  ["Dia do cupom",holding.exact_payment_day],
+  ["Entrega prevista",holding.delivery_month],
+  ["Obras (%)",holding.construction_pct],["Vendas (%)",holding.sales_pct],
+  ["Vacância (%), quando divulgada",holding.vacancy_pct],
+  ["Garantias / lastro",holding.collateral],
+ ];
+ const list=element("dl",undefined,"research-definition");
+ for(const [label,val] of details){
+  if(val==null||val==="nao_informada")continue;
+  list.append(element("dt",label),element("dd",val));
+ }
+ target.append(list);
+ for(const flag of holding.flags||[])target.append(element("p",researchRiskNames[flag.severity]+": "+flag.reason,"footnote"));
+ target.append(element("p","Dados do relatório na data-base. Documentos adicionais podem alterar a situação.","footnote"));
+}
+async function loadResearch(symbol){
+ const s=(symbol||"").trim().toUpperCase();
+ $("research-symbol").value=s;
+ $("research-meta").textContent="Consultando inventário documental de "+s+"...";
+ try{
+  const data=await api("/api/funds/"+encodeURIComponent(s)+"/health");
+  if(data.status!=="sem_documentos"){
+   const cal=await api("/api/funds/"+encodeURIComponent(s)+"/calendar");
+   data._calendar=cal;
+  }
+  activeResearch=data;renderResearch();
+ }catch(err){
+  activeResearch=null;renderResearch();
+  $("research-meta").textContent="Erro ao carregar documentos: "+err.message;
+ }
+}
+$("research-form").addEventListener("submit",event=>{
+ event.preventDefault();loadResearch($("research-symbol").value);
+});
+$("research-category").addEventListener("change",renderResearch);
+$("research-risk").addEventListener("change",renderResearch);
 $("asset-form").addEventListener("submit",async event=>{
  event.preventDefault();const symbol=$("symbol").value.trim().toUpperCase();
- try{await api("/api/assets",{method:"POST",body:JSON.stringify({symbol})});$("symbol").value="";await loadAssets();notice("Ativo adicionado. Clique em ↻ para baixar o histórico.");}
+ try{await api("/api/assets",{method:"POST",body:JSON.stringify({symbol})});$("symbol").value="";await loadAssets();await loadModels();notice("Ativo adicionado. Clique em ↻ para baixar o histórico.");}
  catch(e){notice(e.message);}
 });
 $("position-form").addEventListener("submit",async event=>{
@@ -130,4 +297,4 @@ $("refresh-all").addEventListener("click",async()=>{
  for(const asset of assets){try{await api("/api/assets/"+encodeURIComponent(asset.symbol)+"/refresh",{method:"POST"});}catch(e){failed.push(asset.symbol);}}
  try{await loadAssets();await loadPortfolio();notice(failed.length?"Falha ao atualizar: "+failed.join(", "):"Consultas concluídas. Consulte a data de cada preço.");}finally{button.disabled=false;}
 });
-(async()=>{try{await api("/api/health");$("api-status").textContent="● API conectada";await loadAssets();await loadPortfolio();}catch(e){$("api-status").textContent="● API indisponível";notice(e.message);}})();
+(async()=>{try{await api("/api/health");$("api-status").textContent="● API conectada";await loadAssets();await loadPortfolio();await loadModels();await loadResearch("MXRF11");}catch(e){$("api-status").textContent="● API indisponível";notice(e.message);}})();

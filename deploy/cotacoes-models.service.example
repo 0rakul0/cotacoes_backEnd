@@ -1,0 +1,20 @@
+# Exemplo systemd para treino de baseline por ativo (uma vez por semana).
+# Ajuste usuario, diretorios e ambiente antes de ativar.
+# Modelos PyTorch devem ser treinados manualmente com requirements-ml.txt
+# ou em worker de GPU dedicado, nao por este timer leve.
+[Unit]
+Description=Cotacoes - treino semanal de modelos de referencia por ativo
+After=network-online.target cotacoes-refresh.service
+
+[Service]
+Type=oneshot
+User=USUARIO
+Group=USUARIO
+WorkingDirectory=/home/USUARIO/cotacoes_backEnd
+Environment=COTACOES_DB_PATH=/home/USUARIO/cotacoes_backEnd/data/cotacoes.sqlite3
+Environment=COTACOES_MODELS_DIR=/home/USUARIO/cotacoes_backEnd/data/model_artifacts
+ExecStart=/home/USUARIO/cotacoes_backEnd/.venv/bin/python -m cotacoes.model_jobs train --all --family ridge
+Nice=10
+CPUQuota=50%
+NoNewPrivileges=true
+PrivateTmp=true

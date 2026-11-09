@@ -13,11 +13,11 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from cotacoes import allocation, analysis, fundamentals, ledger, market, model_registry, model_training, service, storage
+from cotacoes import allocation, analysis, fundamentals, ledger, market, model_registry, model_training, portfolio_health, service, storage
 
 app = FastAPI(
     title="Cotacoes API",
-    version="0.4.0",
+    version="0.5.0",
     description="Acompanhamento financeiro e analise historica. Nao e recomendacao de investimento.",
 )
 FRONTEND = Path(
@@ -31,6 +31,15 @@ def startup():
     ledger.initialize()
     fundamentals.initialize()
     model_registry.initialize()
+    portfolio_health.initialize()
+    # Exemplo auditavel e PARCIAL do MXRF11 para demonstrar o motor de pesquisa.
+    # Nunca substitui dados mais recentes importados pelo operador.
+    if os.getenv("COTACOES_SEED_HEALTH_EXAMPLE", "1") == "1":
+        sample_path = Path(__file__).resolve().parent / "examples" / "mxrf11_2026_09.json"
+        if sample_path.is_file() and portfolio_health.latest("MXRF11") is None:
+            import json
+            portfolio_health.ingest(json.loads(sample_path.read_text(encoding="utf-8")))
+
 
 
 @app.middleware("http")
@@ -111,7 +120,7 @@ def home():
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "version": "0.4.0"}
+    return {"status": "ok", "version": "0.5.0"}
 
 
 @app.get("/api/assets")
@@ -199,6 +208,53 @@ def model_forecast(symbol: str):
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     except (ImportError, FileNotFoundError, OSError) as exc:
         raise HTTPException(status_code=503, detail="Artefato ou dependencia de modelo indisponivel.") from exc
+
+
+@app.get("/api/funds/{symbol}/health")
+def fund_documentary_health(symbol: str):
+    return portfolio_health.report(valid_symbol(symbol))
+
+
+@app.get("/api/funds/{symbol}/documents")
+def fund_document_list(symbol: str):
+    result = portfolio_health.report(valid_symbol(symbol))
+    return {"symbol": result["symbol"],
+            "reference_date": result.get("reference_date"),
+            "coverage": result.get("coverage"),
+            "items": result.get("source_documents", [])}
+
+
+@app.get("/api/funds/{symbol}/holdings")
+def fund_underlying_assets(
+    symbol: str,
+    category: str | None = Query(None),
+    risk: str | None = Query(None),
+):
+    try:
+        result = portfolio_health.report(valid_symbol(symbol), category=category)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    if risk:
+        if risk not in portfolio_health.LEVELS:
+            raise HTTPException(status_code=422, detail="Risco invalido.")
+        result["exposures"] = [p for p in result["exposures"] if p["risk"] == risk]
+    return {"symbol": result["symbol"], "reference_date": result.get("reference_date"),
+            "coverage": result.get("coverage"), "total": len(result["exposures"]),
+            "items": result["exposures"],
+            "note": "O inventario pode ser parcial; veja o campo coverage."}
+
+
+@app.get("/api/funds/{symbol}/holdings/{holding_id}")
+def fund_underlying_detail(symbol: str, holding_id: str):
+    item = portfolio_health.exposure(valid_symbol(symbol), holding_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Posicao nao documentada.")
+    return item
+
+
+@app.get("/api/funds/{symbol}/calendar")
+def fund_contract_calendar(symbol: str):
+    return portfolio_health.agenda(valid_symbol(symbol))
 
 
 @app.get("/api/analysis/risk/{symbol}")

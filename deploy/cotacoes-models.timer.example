@@ -1,0 +1,15 @@
+# Instale com nome cotacoes-models.timer; altere horario conforme desejado.
+# sudo systemctl daemon-reload
+# sudo systemctl enable --now cotacoes-models.timer
+# sudo systemctl list-timers cotacoes-models.timer
+[Unit]
+Description=Cotacoes - ciclo semanal de modelos por ticker
+
+[Timer]
+OnCalendar=Sun *-*-* 04:30:00
+Persistent=true
+RandomizedDelaySec=15min
+Unit=cotacoes-models.service
+
+[Install]
+WantedBy=timers.target
