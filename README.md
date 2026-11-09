@@ -239,3 +239,28 @@ Para extrair um PDF oficial e produzir um staging que precisa de revisão: pip i
 Documentação, regras e fontes: docs/PORTFOLIO_HEALTH.md. O piloto é carregado uma única vez, se o banco ainda não contiver pesquisa MXRF11, salvo COTACOES_SEED_HEALTH_EXAMPLE=0.
 
 **Importante:** não inferir saúde boa por falta de documentos. Vacância locatícia não é o mesmo que estoque de apartamentos ainda não vendidos. Modelos de preço por ativo e risco jurídico/contratual são análises diferentes.
+
+## Windows: iniciar automaticamente sem deixar o terminal aberto
+
+Há scripts próprios em `scripts/windows/`, baseados no Agendador de Tarefas do Windows. O backend inicia ao ligar o PC e reinicia automaticamente se encerrar com falha, mesmo sem sessão interativa aberta.
+
+1. Crie o ambiente virtual local `.venv` e instale `requirements.txt`.
+2. Abra **PowerShell como Administrador** na raiz do repositório.
+3. Execute:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\windows\install_cotacoes_task.ps1
+```
+
+Informe a conta e a **senha do Windows**, não o PIN. O processo roda como seu usuário, não como SYSTEM, e escuta somente em `http://127.0.0.1:7777`.
+
+Para consultar e reiniciar:
+
+```powershell
+Invoke-RestMethod http://127.0.0.1:7777/api/health
+Stop-ScheduledTask -TaskName "Cotacoes-FastAPI"
+Start-ScheduledTask -TaskName "Cotacoes-FastAPI"
+Get-Content .\data\logs\cotacoes-windows.log -Tail 50
+```
+
+Instruções completas, remoção da tarefa e configuração manual: [Inicialização automática no Windows](docs/WINDOWS_AUTOSTART.md). O PC deve permanecer ligado e sem suspensão. Não libere a porta para Internet sem autenticação e HTTPS.

@@ -1,0 +1,60 @@
+name: Windows launcher smoke test
+on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/windows/**"
+      - "docs/WINDOWS_AUTOSTART.md"
+      - ".github/workflows/windows-autostart.yml"
+  workflow_dispatch:
+
+jobs:
+  windows-launcher:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse PowerShell scripts
+        shell: pwsh
+        run: |
+          foreach ($script in Get-ChildItem .\scripts\windows\*.ps1) {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($script.FullName, [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error $_.Message }
+              throw "Invalid PowerShell syntax in $($script.Name)"
+            }
+          }
+      - name: Install backend
+        shell: pwsh
+        run: |
+          python -m venv .venv
+          .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+      - name: Start launcher and check API health
+        shell: pwsh
+        run: |
+          $proc = Start-Process -FilePath "$env:WINDIR\System32\cmd.exe" -ArgumentList "/d", "/c", "scripts\windows\start_cotacoes.cmd" -WorkingDirectory (Get-Location).Path -PassThru -WindowStyle Hidden
+          try {
+            $ready = $false
+            for ($i = 0; $i -lt 30; $i++) {
+              Start-Sleep -Seconds 1
+              try {
+                $health = Invoke-RestMethod -Uri "http://127.0.0.1:7777/api/health" -TimeoutSec 2
+                if ($health.status -eq "ok") { $ready = $true; break }
+              } catch {}
+              if ($proc.HasExited) { throw "Launcher exited early: $($proc.ExitCode)" }
+            }
+            if (-not $ready) { throw "API did not become healthy." }
+            Write-Host "Windows launcher OK"
+          } finally {
+            if (-not $proc.HasExited) {
+              & taskkill.exe /PID $proc.Id /T /F | Out-Null
+            }
+            if (Test-Path "data\logs\cotacoes-windows.log") {
+              Get-Content "data\logs\cotacoes-windows.log" -Tail 15
+            }
+          }
