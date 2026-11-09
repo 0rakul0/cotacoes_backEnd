@@ -1,0 +1,15 @@
+# Instale como cotacoes-refresh.timer
+# sudo systemctl daemon-reload
+# sudo systemctl enable --now cotacoes-refresh.timer
+# sudo systemctl list-timers cotacoes-refresh.timer
+[Unit]
+Description=Atualizacao de cotacoes a cada hora
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1h
+Persistent=true
+Unit=cotacoes-refresh.service
+
+[Install]
+WantedBy=timers.target

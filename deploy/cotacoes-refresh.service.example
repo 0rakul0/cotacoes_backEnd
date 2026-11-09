@@ -1,0 +1,13 @@
+# Instale como cotacoes-refresh.service com caminhos reais.
+# Deve rodar separadamente da API, preferencialmente via timer.
+[Unit]
+Description=Cotacoes - atualizar cache de mercado
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=USUARIO
+Group=USUARIO
+WorkingDirectory=/home/USUARIO/cotacoes_backEnd
+Environment=COTACOES_DB_PATH=/home/USUARIO/cotacoes_backEnd/data/cotacoes.sqlite3
+ExecStart=/home/USUARIO/cotacoes_backEnd/.venv/bin/python -m monitoramento.monitorar --once

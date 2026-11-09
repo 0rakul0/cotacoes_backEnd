@@ -1,122 +1,75 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import pandas as pd
-import os
+"""Atualizador opcional de cotacoes (sem Selenium).
+
+Uso:
+    python -m monitoramento.monitorar --once
+    python -m monitoramento.monitorar --loop --interval-minutes 60
+
+Os dados do yfinance sao fechamentos historicos diarios, nao feed em tempo real.
+"""
+from __future__ import annotations
+
+import argparse
 import logging
-import time as t
-from datetime import datetime, time
-from cotacoes.grafico import gerar_grafico_html
+import time
 
-# Configuração do logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+from cotacoes import market, service, storage
 
-# Função global para gerenciar o navegador
-driver = None
+log = logging.getLogger(__name__)
 
-def start_browser():
-    global driver
-    if driver is None:
-        logging.info("Iniciando o navegador Selenium...")
-        chrome_options = Options()
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--headless")
-        driver = webdriver.Chrome(options=chrome_options)
 
-def stop_browser():
-    global driver
-    if driver:
-        logging.info("Encerrando o navegador Selenium...")
-        driver.quit()
-        driver = None
-
-def save_data_to_csv(ticker, price):
-    """
-    Salva os dados coletados em um arquivo CSV organizado por data.
-
-    Args:
-        ticker (str): Nome do ativo.
-        price (str): Preço coletado.
-    """
-    try:
-        data_minute = datetime.now().strftime("%Y-%m-%d %H:%M")
-        dia = datetime.today().strftime("%d-%m-%Y")
-        os.makedirs(f"../dados/csv/{dia}", exist_ok=True)
-        arquivo = f"../dados/csv/{dia}/{ticker}_stock_data.csv"
-
-        df_stock = pd.DataFrame([{
-            'Data_minute': data_minute,
-            'Valor': price,
-            'Ticker': ticker
-        }])
-
-        if os.path.exists(arquivo):
-            df_stock.to_csv(arquivo, mode='a', index=False, header=False)
+def run_once(symbols: list[str] | None = None, force: bool = False) -> dict:
+    storage.initialize()
+    if symbols is None:
+        symbols = [row["symbol"] for row in storage.list_assets()]
+    else:
+        symbols = [market.normalize_symbol(symbol) for symbol in symbols]
+    report = {"updated": 0, "cached": 0, "errors": 0, "details": []}
+    for symbol in symbols:
+        if not storage.asset_exists(symbol):
+            log.warning("Ticker nao acompanhado: %s", symbol)
+            report["errors"] += 1
+            report["details"].append({"symbol": symbol, "status": "error", "error": "Nao cadastrado"})
+            continue
+        result = service.refresh(symbol, force=force)
+        report["details"].append(result)
+        status = result["status"]
+        if status == "updated":
+            report["updated"] += 1
+            log.info("%s atualizado (%d pontos)", symbol, result["rows"])
+        elif status == "cached":
+            report["cached"] += 1
+            log.info("%s ainda em cache", symbol)
         else:
-            df_stock.to_csv(arquivo, index=False)
-        logging.info(f"Dados salvos para {ticker}: {price}")
-    except Exception as e:
-        logging.error(f"Erro ao salvar dados para {ticker}: {e}")
+            report["errors"] += 1
+            log.warning("%s: %s", symbol, result.get("error", "falha desconhecida"))
+    return report
 
-def extract_price(ticker, url, intervalo):
-    """
-    Extrai o preço do ativo utilizando o navegador Selenium.
 
-    Args:
-        ticker (str): Nome do ativo.
-        url (str): URL do ativo no Google Finance.
-    """
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--once", action="store_true", help="Atualizar uma vez (padrao).")
+    parser.add_argument("--loop", action="store_true", help="Rodar continuamente como processo separado.")
+    parser.add_argument("--interval-minutes", type=int, default=60, help="Intervalo no modo loop (minimo 5).")
+    parser.add_argument("--force", action="store_true", help="Ignorar TTL do cache.")
+    parser.add_argument("--symbols", nargs="+", help="Somente estes tickers ja cadastrados.")
+    args = parser.parse_args()
+    if args.loop and args.once:
+        parser.error("--once e --loop sao modos exclusivos.")
+    if args.loop and args.interval_minutes < 5:
+        parser.error("O intervalo minimo do loop e 5 minutos.")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     try:
-        if intervalo:
-            logging.info(f"Extraindo dados para {ticker}...")
-            driver.get(url)
-            t.sleep(2)
-            price_element = driver.find_element("xpath", '//*[@class="YMlKec fxKbKc"]')
-            price = price_element.text
-            save_data_to_csv(ticker, price)
-            gerar_grafico_html("BTC-BRL", True)
-        else:
-            logging.info(f"Fora do horário de funcionamento para {ticker}.")
-    except Exception as e:
-        logging.error(f"Erro ao extrair dados para {ticker}: {e}")
+        while True:
+            result = run_once(args.symbols, args.force)
+            log.info("Resultado: atualizados=%s, cache=%s, erros=%s",
+                     result["updated"], result["cached"], result["errors"])
+            if not args.loop:
+                return 1 if result["errors"] else 0
+            time.sleep(args.interval_minutes * 60)
+    except KeyboardInterrupt:
+        log.info("Interrompido pelo operador.")
+        return 130
 
-def intervalo_acoes():
-    now = datetime.now()
-    return now.weekday() < 5 and time(10, 0) <= now.time() <= time(18, 0)
-
-def intervalo_btc():
-    now = datetime.now()
-    return now.weekday() < 7
-
-def extract_btc():
-    extract_price("BTC-BRL", "https://www.google.com/finance/quote/BTC-BRL", intervalo_btc())
-
-def extract_petr4():
-    extract_price("PETR4", "https://www.google.com/finance/quote/PETR4:BVMF", intervalo_acoes())
-
-def extract_nvdc34():
-    extract_price("NVDC34", "https://www.google.com/finance/quote/NVDC34:BVMF", intervalo_acoes())
-
-def extract_mxrf11():
-    extract_price("MXRF11", "https://www.google.com/finance/quote/MXRF11:BVMF", intervalo_acoes())
-
-def extract_appl34():
-    extract_price("APPL34", "https://www.google.com/finance/quote/AAPL34:BVMF", intervalo_acoes())
-
-def main():
-    # Inicia o navegador
-    start_browser()
-    while True:
-        extract_btc()
-        extract_petr4()
-        extract_nvdc34()
-        extract_mxrf11()
-        extract_appl34()
-        t.sleep(60)
-    stop_browser()
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

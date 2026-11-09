@@ -144,6 +144,20 @@ Variáveis opcionais:
 
 Em Linux há um exemplo de serviço em `deploy/cotacoes.service.example` para rodar com systemd. Ajuste usuário, diretório, host e variáveis antes de instalar.
 
+## Atualizacao automatica opcional
+
+O monitoramento antigo utilizava Selenium e gerava arquivos HTML pesados. Foi substituido por uma rotina sem navegador:
+
+    python -m monitoramento.monitorar --once
+
+Para executar a cada hora no mesmo processo:
+
+    python -m monitoramento.monitorar --loop --interval-minutes 60
+
+Na instalacao Linux, prefira o **systemd timer** de `deploy/cotacoes-refresh.timer.example` e o servico `deploy/cotacoes-refresh.service.example`. Eles fazem atualizacao periodica em processo separado da API. O arquivo `deploy/cotacoes.service.example` serve para manter o FastAPI online.
+
+Os preços sao historicos diarios; chamar o coletor de hora em hora **nao** transforma o provedor em fonte de precos ao vivo. O modo `--force` pode ignorar o cache, mas deve ser usado com parcimonia.
+
 ## Testes
 
     pip install -r requirements-dev.txt
